@@ -1,106 +1,38 @@
 <!DOCTYPE html>
-<!-- Objective 1.2: DOCTYPE declaration and well-formed page markup -->
 <html lang="en">
 
 <head>
-  <!-- Objective 1.1: meta encoding -->
+  
   <meta charset="UTF-8">
-
-  <!-- Objective 1.1: meta viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Objective 1.1: meta description -->
   <meta name="description" content="Portfolio of Mohamed Afnnan Veettilayil — EIE student at FISAT, embedded systems engineer, anchor, editor, and community builder.">
-
-  <!-- Objective 1.1: meta keywords -->
   <meta name="keywords" content="Mohamed Afnnan, FISAT, EIE, Electronics, Instrumentation, Embedded Systems, IoT, Portfolio">
 
   <title>Mohamed Afnnan Veettilayil — Portfolio</title>
 
-  <!-- Objective 1.1 + 2.1: External stylesheet via link tag -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Objective 2.1: Internal (embedded) stylesheet -->
-  <style>
-    /* Objective 2.2: Element selector */
-    hr {
-      border: none;
-      border-top: 1px solid #cccccc;
-      margin: 20px 0;
-    }
-
-    /* Objective 2.2: Class selector */
-    .profile-img {
-      border-radius: 4px;
-      border: 2px solid #003366;
-    }
-
-    .award-item {
-      background-color: #fffbe6;
-      border-left: 3px solid #f0a500;
-      padding: 4px 10px;
-      margin-bottom: 6px;
-    }
-
-    /* Objective 2.2: ID selector */
-    #home-intro {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-
-    /* Objective 2.2: Pseudo-class selector */
-    summary:hover {
-      background-color: #eef2ff;
-    }
-
-    details[open] summary {
-      color: #0055aa;
-    }
-  </style>
-
-  <!-- Objective 1.1: script tag -->
-  <script>
-    function scrollToTop() {
-      window.scrollTo(0, 0);
-    }
-  </script>
-
-  <!-- Objective 1.1: noscript tag -->
-  <noscript>
-    <p style="background:#fffbe6; padding:8px; border:1px solid #f0a500;">
-      JavaScript is disabled in your browser. Some features may not work as expected.
-    </p>
-  </noscript>
 
 </head>
 
 <body>
-
-  <!-- Objective 3.2: Semantic header | Objective 1.2: well-formed markup -->
   <header>
-    <!-- Objective 3.1: h1 -->
     <h1>Mohamed Afnnan Veettilayil</h1>
 
-    <!-- Objective 2.1: Inline style -->
     <p style="font-style: italic; color: #003366;">
       EIE Undergrad &nbsp;·&nbsp; Embedded Systems &nbsp;·&nbsp; Anchor &nbsp;·&nbsp; Editor &nbsp;·&nbsp; Community Builder
     </p>
 
     <p>
       Thrissur, Kerala &nbsp;|&nbsp;
-      <!-- Objective 3.3: absolute link, target -->
       <a href="tel:+918891508831">+91-8891508831</a> &nbsp;|&nbsp;
       <a href="mailto:afnnan.dev@gmail.com">afnnan.dev@gmail.com</a> &nbsp;|&nbsp;
       <a href="https://linkedin.com/in/mohamedafnnan" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
       <a href="https://github.com/mohamedafnnan" target="_blank">GitHub</a> &nbsp;|&nbsp;
       <a href="https://linktr.ee/mohamedafnnan" target="_blank">Linktree</a> &nbsp;|&nbsp;
-      <!-- Objective 3.3: relative link -->
       <a href="resume.html">Full CV</a>
     </p>
     <hr>
   </header>
-
-  <!-- Objective 3.2: Semantic nav | Objective 3.3: Internal bookmark navigation -->
   <nav>
     <ul>
       <li><a href="#home">Home</a></li>
@@ -138,8 +70,6 @@
           <a href="resume.html">complete CV here</a>.
         </p>
       </div>
-
-      <!-- Objective 4.1: img with usemap | Objective 3.3: map and area -->
       <figure>
         <img
           src="profile.jpg"
@@ -147,8 +77,7 @@
           width="220"
           class="profile-img"
           usemap="#profile-map">
-
-        <!-- Objective 3.3: map and area elements -->
+        
         <map name="profile-map">
           <area
             shape="rect"
@@ -163,28 +92,13 @@
             alt="Go to About section">
         </map>
 
-        <!-- Objective 3.2: figcaption -->
         <figcaption>Mohamed Afnnan — Click left half for LinkedIn, right half for About</figcaption>
-      </figure>
-
-      <!-- Objective 4.1: picture element -->
-      <figure>
-        <picture>
-          <source srcset="profile.jpg" type="image/jpeg" media="(min-width: 1px)">
-          <img
-            src="profile.jpg"
-            alt="Mohamed Afnnan Veettilayil — picture element fallback"
-            width="180"
-            class="profile-img">
-        </picture>
-        <figcaption>Objective 4.1 — picture element with source and img fallback</figcaption>
       </figure>
 
     </section>
 
     <hr>
 
-    <!-- Objective 3.2: section, aside, details, summary -->
     <section id="about">
       <h2>About</h2>
 
@@ -197,7 +111,6 @@
         delivery.
       </p>
 
-      <!-- Objective 3.2: aside -->
       <aside>
         <p><strong>Quick Facts</strong></p>
         <ul>
@@ -208,7 +121,6 @@
         </ul>
       </aside>
 
-      <!-- Objective 3.2: details and summary -->
       <details>
         <summary>Languages I Speak</summary>
         <table>
@@ -244,7 +156,6 @@
     <section id="education">
       <h2>Education</h2>
 
-      <!-- Objective 3.1: table, tr, th, td, br -->
       <table>
         <tr>
           <th>Institution</th>
@@ -288,7 +199,6 @@
     <section id="skills">
       <h2>Skills</h2>
 
-      <!-- Objective 3.2: article -->
       <article>
         <h3>Technical Skills</h3>
         <table>
@@ -321,7 +231,7 @@
 
       <article>
         <h3>Professional Skills</h3>
-        <!-- Objective 3.1: ul, li -->
+ 
         <ul>
           <li>Event Coordination</li>
           <li>Technical Leadership</li>
@@ -433,7 +343,7 @@
     <section id="projects">
       <h2>Projects</h2>
 
-      <!-- Objective 3.2: figure and figcaption -->
+  
       <figure>
         <img
           src="project.jpg"
@@ -510,7 +420,7 @@
 
       <article>
         <h3>Certifications</h3>
-        <!-- Objective 3.1: ol -->
+        
         <ol>
           <li>ISC2 Certified in Cybersecurity (CC) — In Progress</li>
           <li>Microsoft Certified: Azure AI Fundamentals</li>
@@ -544,13 +454,11 @@
 
     <hr>
 
-    <!-- Objective 4.1 + 4.2: Media Gallery -->
     <section id="media-gallery">
       <h2>Media Gallery</h2>
 
       <article>
         <h3>India Book of Records — 80 WPM Left-Handed Typing</h3>
-        <!-- Objective 4.2: video, source, track -->
         <video width="480" controls poster="profile.jpg">
           <source src="typing.mp4" type="video/mp4">
           <track kind="subtitles" src="subtitles.vtt" srclang="en" label="English" default>
@@ -560,7 +468,6 @@
 
       <article>
         <h3>Just the Two of Us — Bill Withers &amp; Grover Washington Jr.</h3>
-        <!-- Objective 4.2: audio, source -->
         <audio controls>
           <source src="audio.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
@@ -569,7 +476,7 @@
 
       <article>
         <h3>GitHub Profile</h3>
-        <!-- Objective 4.2: iframe -->
+        
         <iframe
           src="https://github.com/mohamedafnnan"
           width="700"
@@ -582,27 +489,21 @@
 
     <hr>
 
-    <!-- Objective 3.4: Contact Form -->
     <section id="contact">
       <h2>Contact</h2>
       <p>Reach me at <a href="mailto:afnnan.dev@gmail.com">afnnan.dev@gmail.com</a> or fill the form below.</p>
 
-      <!-- Objective 3.4: form, action, method -->
       <form action="mailto:afnnan.dev@gmail.com" method="get">
 
-        <!-- Objective 3.4: label, input text -->
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" placeholder="Your full name" required>
 
-        <!-- Objective 3.4: label, input email -->
         <label for="email">Email Address</label>
         <input type="email" id="email" name="email" placeholder="your@email.com" required>
 
-        <!-- Objective 3.4: label, input tel -->
         <label for="phone">Phone Number (optional)</label>
         <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
 
-        <!-- Objective 3.4: label, select, option -->
         <label for="reason">Reason for Contact</label>
         <select id="reason" name="reason">
           <option value="">— Select a reason —</option>
@@ -613,18 +514,15 @@
           <option value="general">General Enquiry</option>
         </select>
 
-        <!-- Objective 3.4: label, textarea -->
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
 
-        <!-- Objective 3.4: input checkbox -->
         <label>
           <input type="checkbox" name="consent" value="yes" required>
           I consent to being contacted at the email address provided.
         </label>
 
         <br>
-        <!-- Objective 3.4: button submit and reset -->
         <button type="submit">Send Message</button>
         <button type="reset">Clear Form</button>
 
@@ -635,7 +533,6 @@
 
   <hr>
 
-  <!-- Objective 3.2: Semantic footer -->
   <footer>
     <p>
       &copy; 2026 Mohamed Afnnan Veettilayil &nbsp;|&nbsp;
