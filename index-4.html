@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<!-- Objective 1.2: DOCTYPE declaration and well-formed page markup -->
+<html lang="en">
+
+<head>
+  <!-- Objective 1.1: meta encoding -->
+  <meta charset="UTF-8">
+
+  <!-- Objective 1.1: meta viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Objective 1.1: meta description -->
+  <meta name="description" content="Portfolio of Mohamed Afnnan Veettilayil — EIE student at FISAT, embedded systems engineer, anchor, editor, and community builder.">
+
+  <!-- Objective 1.1: meta keywords -->
+  <meta name="keywords" content="Mohamed Afnnan, FISAT, EIE, Electronics, Instrumentation, Embedded Systems, IoT, Portfolio">
+
+  <title>Mohamed Afnnan Veettilayil — Portfolio</title>
+
+  <!-- Objective 1.1 + 2.1: External stylesheet via link tag -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Objective 2.1: Internal (embedded) stylesheet -->
+  <style>
+    /* Objective 2.2: Element selector */
+    hr {
+      border: none;
+      border-top: 1px solid #cccccc;
+      margin: 20px 0;
+    }
+
+    /* Objective 2.2: Class selector */
+    .profile-img {
+      border-radius: 4px;
+      border: 2px solid #003366;
+    }
+
+    .award-item {
+      background-color: #fffbe6;
+      border-left: 3px solid #f0a500;
+      padding: 4px 10px;
+      margin-bottom: 6px;
+    }
+
+    /* Objective 2.2: ID selector */
+    #home-intro {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    /* Objective 2.2: Pseudo-class selector */
+    summary:hover {
+      background-color: #eef2ff;
+    }
+
+    details[open] summary {
+      color: #0055aa;
+    }
+  </style>
+
+  <!-- Objective 1.1: script tag -->
+  <script>
+    function scrollToTop() {
+      window.scrollTo(0, 0);
+    }
+  </script>
+
+  <!-- Objective 1.1: noscript tag -->
+  <noscript>
+    <p style="background:#fffbe6; padding:8px; border:1px solid #f0a500;">
+      JavaScript is disabled in your browser. Some features may not work as expected.
+    </p>
+  </noscript>
+
+</head>
+
+<body>
+
+  <!-- Objective 3.2: Semantic header | Objective 1.2: well-formed markup -->
+  <header>
+    <!-- Objective 3.1: h1 -->
+    <h1>Mohamed Afnnan Veettilayil</h1>
+
+    <!-- Objective 2.1: Inline style -->
+    <p style="font-style: italic; color: #003366;">
+      EIE Undergrad &nbsp;·&nbsp; Embedded Systems &nbsp;·&nbsp; Anchor &nbsp;·&nbsp; Editor &nbsp;·&nbsp; Community Builder
+    </p>
+
+    <p>
+      Thrissur, Kerala &nbsp;|&nbsp;
+      <!-- Objective 3.3: absolute link, target -->
+      <a href="tel:+918891508831">+91-8891508831</a> &nbsp;|&nbsp;
+      <a href="mailto:afnnan.dev@gmail.com">afnnan.dev@gmail.com</a> &nbsp;|&nbsp;
+      <a href="https://linkedin.com/in/mohamedafnnan" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
+      <a href="https://github.com/mohamedafnnan" target="_blank">GitHub</a> &nbsp;|&nbsp;
+      <a href="https://linktr.ee/mohamedafnnan" target="_blank">Linktree</a> &nbsp;|&nbsp;
+      <!-- Objective 3.3: relative link -->
+      <a href="resume.html">Full CV</a>
+    </p>
+    <hr>
+  </header>
+
+  <!-- Objective 3.2: Semantic nav | Objective 3.3: Internal bookmark navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#media-gallery">Media Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <hr>
+
+  <main>
+
+    <!-- Objective 3.2: section | Objective 3.3: bookmark id="home" -->
+    <section id="home">
+      <h2>Home</h2>
+
+      <!-- Objective 3.1: div, span -->
+      <div id="home-intro">
+        <p>
+          Welcome to my portfolio. I am a
+          <span class="role-title">B.Tech Electronics and Instrumentation Engineering</span>
+          student at FISAT, Angamaly, Kerala — equally at home soldering a microcontroller,
+          anchoring a national-level event, editing a department publication, or building a
+          community tool from scratch.
+        </p>
+        <p>
+          Use the navigation above to jump to any section, or view my
+          <!-- Objective 3.3: relative link -->
+          <a href="resume.html">complete CV here</a>.
+        </p>
+      </div>
+
+      <!-- Objective 4.1: img with usemap | Objective 3.3: map and area -->
+      <figure>
+        <img
+          src="profile.jpg"
+          alt="Mohamed Afnnan Veettilayil — profile photo"
+          width="220"
+          class="profile-img"
+          usemap="#profile-map">
+
+        <!-- Objective 3.3: map and area elements -->
+        <map name="profile-map">
+          <area
+            shape="rect"
+            coords="0,0,110,300"
+            href="https://linkedin.com/in/mohamedafnnan"
+            target="_blank"
+            alt="Visit LinkedIn profile">
+          <area
+            shape="rect"
+            coords="110,0,220,300"
+            href="#about"
+            alt="Go to About section">
+        </map>
+
+        <!-- Objective 3.2: figcaption -->
+        <figcaption>Mohamed Afnnan — Click left half for LinkedIn, right half for About</figcaption>
+      </figure>
+
+      <!-- Objective 4.1: picture element -->
+      <figure>
+        <picture>
+          <source srcset="profile.jpg" type="image/jpeg" media="(min-width: 1px)">
+          <img
+            src="profile.jpg"
+            alt="Mohamed Afnnan Veettilayil — picture element fallback"
+            width="180"
+            class="profile-img">
+        </picture>
+        <figcaption>Objective 4.1 — picture element with source and img fallback</figcaption>
+      </figure>
+
+    </section>
+
+    <hr>
+
+    <!-- Objective 3.2: section, aside, details, summary -->
+    <section id="about">
+      <h2>About</h2>
+
+      <p>
+        B.Tech Electronics and Instrumentation Engineering student at FISAT — equally at home
+        soldering a microcontroller, anchoring a national-level event, editing a department
+        publication, or building a community tool from scratch. Hands-on experience across
+        embedded systems, Verilog HDL, IoT, and cybersecurity fundamentals, paired with a
+        consistent track record in technical leadership, documentation, and real-world project
+        delivery.
+      </p>
+
+      <!-- Objective 3.2: aside -->
+      <aside>
+        <p><strong>Quick Facts</strong></p>
+        <ul>
+          <li>Institution: FISAT, Angamaly, Kerala</li>
+          <li>Branch: Electronics and Instrumentation Engineering</li>
+          <li>Semester: S2 (Completed) | Batch: 2025–2029</li>
+          <li>India Book of Records: Fastest Left-Handed Typist — 80 WPM</li>
+        </ul>
+      </aside>
+
+      <!-- Objective 3.2: details and summary -->
+      <details>
+        <summary>Languages I Speak</summary>
+        <table>
+          <tr><th>Language</th><th>Proficiency</th></tr>
+          <tr><td>Malayalam</td><td>Native</td></tr>
+          <tr><td>English</td><td>Native</td></tr>
+          <tr><td>Arabic</td><td>Elementary</td></tr>
+          <tr><td>German</td><td>Limited Working (IGCSE base)</td></tr>
+        </table>
+      </details>
+
+      <details>
+        <summary>Interests &amp; Focus Areas</summary>
+        <ul>
+          <li>VLSI &amp; Digital Design</li>
+          <li>Instrumentation &amp; Control Systems</li>
+          <li>Industrial Automation</li>
+          <li>IoT &amp; Edge Hardware</li>
+          <li>Cybersecurity &amp; Secure Systems</li>
+          <li>Cost-Efficient Scalable Systems</li>
+          <li>Technical Communication</li>
+          <li>Embedded Systems</li>
+          <li>Signal Processing</li>
+          <li>Hardware-Software Integration</li>
+          <li>Open-Source Engineering Education</li>
+        </ul>
+      </details>
+
+    </section>
+
+    <hr>
+
+    <section id="education">
+      <h2>Education</h2>
+
+      <!-- Objective 3.1: table, tr, th, td, br -->
+      <table>
+        <tr>
+          <th>Institution</th>
+          <th>Qualification</th>
+          <th>Period</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td>Federal Institute of Science and Technology (FISAT), Angamaly, Kerala</td>
+          <td>B.Tech, Electronics and Instrumentation Engineering</td>
+          <td>August 2025 – September 2029</td>
+          <td>
+            S2 (Completed)<br>
+            Coursework: Engineering Mathematics, Basic Electrical Engineering, Electronic Devices, Engineering Physics, C Programming, Logic Circuit Design<br>
+            Involvement: ISA, IEEE, IEEE-RAS, IEDC, AICTE IDEA Lab
+          </td>
+        </tr>
+        <tr>
+          <td>Ansar English School, Perumpilavu, Kerala</td>
+          <td>CBSE Grade 12, Science</td>
+          <td>May 2025</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Devamatha CMI International School, Thangaloor, Kerala</td>
+          <td>Cambridge IGCSE (Grade 10)</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>Dukhan English School, Dukhan, Qatar</td>
+          <td>UK National Curriculum (Grade 8)</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+      </table>
+    </section>
+
+    <hr>
+
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <!-- Objective 3.2: article -->
+      <article>
+        <h3>Technical Skills</h3>
+        <table>
+          <tr>
+            <th>Category</th>
+            <th>Details</th>
+          </tr>
+          <tr>
+            <td>HDL &amp; Digital Design</td>
+            <td>Verilog HDL, EDA Playground, D/JK/T Flip-Flops, Ripple Counters, Full Adder, Half Adder, Gate-Level Design, RTL Simulation</td>
+          </tr>
+          <tr>
+            <td>Languages</td>
+            <td>Python, C, Embedded C, Shell Programming, HTML/CSS/JavaScript</td>
+          </tr>
+          <tr>
+            <td>Hardware &amp; Embedded</td>
+            <td>Arduino, ESP32, Microcontroller Programming (AVR/ESP32), Sensor Interfacing, Circuit Analysis, IoT Fundamentals, Signal Conditioning</td>
+          </tr>
+          <tr>
+            <td>Software &amp; Tools</td>
+            <td>MATLAB, Git, Linux/UNIX, Adobe Photoshop, Fusion 360, Audacity, Arduino IDE, OBS Studio, ChatGPT, Claude, Gemini, MS Office Suite</td>
+          </tr>
+          <tr>
+            <td>Core Concepts</td>
+            <td>Embedded Systems, Circuit Design, IoT, FSM Design, Real-Time Systems, Cybersecurity Fundamentals, Technical Documentation</td>
+          </tr>
+        </table>
+      </article>
+
+      <article>
+        <h3>Professional Skills</h3>
+        <!-- Objective 3.1: ul, li -->
+        <ul>
+          <li>Event Coordination</li>
+          <li>Technical Leadership</li>
+          <li>Community Outreach</li>
+          <li>Project Documentation</li>
+          <li>Creative Problem-Solving</li>
+          <li>Technical Writing</li>
+          <li>Visual Communication</li>
+          <li>Public Speaking &amp; Presentation</li>
+          <li>Research &amp; Compilation</li>
+          <li>Administrative Process Design</li>
+          <li>Resume Writing</li>
+          <li>Content Creation</li>
+        </ul>
+      </article>
+    </section>
+
+    <hr>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <article>
+        <h3>Technical</h3>
+        <section>
+          <h4>IoT Specialist — AICTE IDEA Lab Project Team, FISAT</h4>
+          <p class="date-range">March 2026 – Present</p>
+          <ul>
+            <li>Contributing embedded systems and IoT integration to the Smart Sensor-Based Traffic Alert System for hairpin bend highway safety</li>
+            <li>Handling sensor selection, signal conditioning logic, and embedded firmware planning</li>
+          </ul>
+        </section>
+        <section>
+          <h4>IDEA Lab Student Representative — AICTE IDEA Lab, FISAT</h4>
+          <p class="date-range">March 2026 – Present</p>
+          <ul>
+            <li>Scheduled and tracked interviews for Robotics Factory shortlisting</li>
+          </ul>
+        </section>
+      </article>
+
+      <article>
+        <h3>Leadership &amp; Representation</h3>
+        <section>
+          <h4>Google Student Ambassador — Google</h4>
+          <p class="date-range">April 2026 – Present</p>
+          <ul>
+            <li>Selected through competitive psychometric and video submission process; onboarding ahead of campus events in S3</li>
+          </ul>
+        </section>
+        <section>
+          <h4>Student Representative &amp; Core Outreach Lead — ISA, FISAT</h4>
+          <p class="date-range">December 2025 – Present</p>
+          <ul>
+            <li>1st Year ISA Student Representative; coordinated technical workshops; drove registrations for national techathon</li>
+          </ul>
+        </section>
+        <section>
+          <h4>Class Representative — FISAT EIE Department</h4>
+          <p class="date-range">August 2025 – February 2026</p>
+          <ul>
+            <li>Primary liaison between faculty and the 2025-29 EIE batch</li>
+          </ul>
+        </section>
+        <section>
+          <h4>Administrative Associate — FISAT EIE Department</h4>
+          <p class="date-range">August 2025 – Present</p>
+          <ul>
+            <li>Designed duty leave and prayer attendance forms adopted department-wide</li>
+          </ul>
+        </section>
+      </article>
+
+      <article>
+        <h3>Events, Media &amp; Communication</h3>
+        <section>
+          <h4>Chief Editor — Metron, EIE Department Newsletter Vol. 9</h4>
+          <p class="date-range">March 2026 – Present</p>
+          <ul>
+            <li>Sole Chief Editor reaching 240+ students and 20+ faculty; managing content, layout, and publication end-to-end</li>
+          </ul>
+        </section>
+        <section>
+          <h4>Anchoring Lead — TANTRA'26, ISTE FISAT</h4>
+          <p class="date-range">February 2026</p>
+          <ul>
+            <li>Led anchoring for national-level technical event; managed scripting, spontaneous delivery, and audience engagement</li>
+          </ul>
+        </section>
+        <section>
+          <h4>Resource Person — AICTE IDEA Lab, FISAT</h4>
+          <p class="date-range">May 2026</p>
+          <ul>
+            <li>Delivered LinkedIn and resume-building sessions for 11 Class 10–12 students; recommended by Dr. Abi P Mathew</li>
+          </ul>
+        </section>
+        <section>
+          <h4>Freelance Resume Writer — Self-Employed</h4>
+          <p class="date-range">May 2026 – Present</p>
+          <ul>
+            <li>ATS-optimized resumes and LinkedIn profiles; authored open-source ATS Resume Guide</li>
+          </ul>
+        </section>
+      </article>
+    </section>
+
+    <hr>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <!-- Objective 3.2: figure and figcaption -->
+      <figure>
+        <img
+          src="project.jpg"
+          alt="Screenshot of KTU SGPA/CGPA Calculator"
+          width="300">
+        <figcaption>KTU 2024 Scheme SGPA/CGPA Calculator — built and deployed for KTU students</figcaption>
+      </figure>
+
+      <article>
+        <h3>Solar Copra Dryer</h3>
+        <p class="date-range">Renewable Energy, Thermal Systems | FISAT, 2025–2026 | Supervisor: Dr. Abi P Mathew</p>
+        <ul>
+          <li>Led a 10-member team designing a solar-powered copra dryer for Kudumbashree cooperative farmers</li>
+          <li>System design, documentation, community coordination, and grant applications (EPICS in IEEE, IEEE-RAS IROS 2026 Travel Grant)</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Electronic Voting Machine (EVM)</h3>
+        <p class="date-range">Circuit Design, Embedded C | July 2024 – February 2025</p>
+        <ul>
+          <li>Complete EVM deployed for actual school elections with zero errors; appreciation letter from principal; still in active use</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Smart Sensor-Based Traffic Alert System</h3>
+        <p class="date-range">ESP32, Embedded C, IoT | AICTE IDEA Lab, March 2026 – Present</p>
+        <ul>
+          <li>Real-time FSM-driven alert system for hairpin bend highway safety</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>KEAM Student Admissions Helpdesk</h3>
+        <p class="date-range">WhatsApp, Instagram | April 2025 – Present</p>
+        <ul>
+          <li>Assisted 50+ students through KEAM rank, allotment rounds, and college selection counselling</li>
+          <li>Produced allotment infographics and explainer content for first-generation applicants</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>KTU 2024 Scheme SGPA/CGPA Calculator Website</h3>
+        <p class="date-range">HTML, CSS, JavaScript | December 2025</p>
+        <ul>
+          <li>Built and deployed web-based academic calculator; used by 40+ engineering students</li>
+        </ul>
+        <p><a href="https://github.com/mohamedafnnan" target="_blank">View on GitHub →</a></p>
+      </article>
+
+      <article>
+        <h3>Verilog HDL Digital Design</h3>
+        <p class="date-range">Verilog, EDA Playground | S2 EIE Lab, 2026</p>
+        <ul>
+          <li>D, JK, T flip-flops and 4-bit ripple counter with waveform verification; earliest Verilog exposure in KTU EIE curriculum</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>EIE 101 Blog</h3>
+        <p class="date-range">Technical Writing | Ongoing</p>
+        <ul>
+          <li>Writing series on instrumentation and embedded systems fundamentals for first-year EIE students</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <hr>
+
+    <section id="certifications">
+      <h2>Certifications &amp; Achievements</h2>
+
+      <article>
+        <h3>Certifications</h3>
+        <!-- Objective 3.1: ol -->
+        <ol>
+          <li>ISC2 Certified in Cybersecurity (CC) — In Progress</li>
+          <li>Microsoft Certified: Azure AI Fundamentals</li>
+          <li>Python Programming and Essentials (Coursera)</li>
+          <li>MATLAB Fundamentals Certification (NSDC)</li>
+          <li>ESP32 Bootcamp Certification (IDEA, FISAT)</li>
+          <li>Arduino Bootcamp Workshop Certification (IDEA × ISA, FISAT)</li>
+          <li>Toastmasters Youth Leadership Programme | Dukhan, Qatar</li>
+          <li>Typing Speed: 80 WPM left-handed (India Book of Records, video verified)</li>
+        </ol>
+      </article>
+
+      <article>
+        <h3>Awards &amp; Recognition</h3>
+        <div class="award-item"><strong>India Book of Records</strong> — Fastest Left-Handed Typist: 80 WPM (2025)</div>
+        <div class="award-item"><strong>1st Prize</strong> — Innomark Logo Design Challenge, IDEA Club FISAT (2025)</div>
+        <div class="award-item"><strong>Appreciation Letter</strong> — EVM Project, from School Principal (2025)</div>
+        <div class="award-item"><strong>Inter-School Win</strong> — Class Magazine Design Competition (2024)</div>
+      </article>
+
+      <article>
+        <h3>Publications &amp; Resources</h3>
+        <ul>
+          <li><strong>ATS Resume Guide for Engineering Students</strong> (2026)</li>
+          <li><strong>KTU 2024 Scheme Group B Compiled Academic Resources (EIE)</strong></li>
+          <li><strong>KTU 2024 Scheme SGPA/CGPA Calculator Website</strong></li>
+          <li><strong>EIE 101 Blog</strong></li>
+        </ul>
+      </article>
+    </section>
+
+    <hr>
+
+    <!-- Objective 4.1 + 4.2: Media Gallery -->
+    <section id="media-gallery">
+      <h2>Media Gallery</h2>
+
+      <article>
+        <h3>India Book of Records — 80 WPM Left-Handed Typing</h3>
+        <!-- Objective 4.2: video, source, track -->
+        <video width="480" controls poster="profile.jpg">
+          <source src="typing.mp4" type="video/mp4">
+          <track kind="subtitles" src="subtitles.vtt" srclang="en" label="English" default>
+          Your browser does not support the video element.
+        </video>
+      </article>
+
+      <article>
+        <h3>Just the Two of Us — Bill Withers &amp; Grover Washington Jr.</h3>
+        <!-- Objective 4.2: audio, source -->
+        <audio controls>
+          <source src="audio.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </article>
+
+      <article>
+        <h3>GitHub Profile</h3>
+        <!-- Objective 4.2: iframe -->
+        <iframe
+          src="https://github.com/mohamedafnnan"
+          width="700"
+          height="400"
+          title="Mohamed Afnnan GitHub Profile">
+        </iframe>
+      </article>
+
+    </section>
+
+    <hr>
+
+    <!-- Objective 3.4: Contact Form -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Reach me at <a href="mailto:afnnan.dev@gmail.com">afnnan.dev@gmail.com</a> or fill the form below.</p>
+
+      <!-- Objective 3.4: form, action, method -->
+      <form action="mailto:afnnan.dev@gmail.com" method="get">
+
+        <!-- Objective 3.4: label, input text -->
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+        <!-- Objective 3.4: label, input email -->
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+        <!-- Objective 3.4: label, input tel -->
+        <label for="phone">Phone Number (optional)</label>
+        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+
+        <!-- Objective 3.4: label, select, option -->
+        <label for="reason">Reason for Contact</label>
+        <select id="reason" name="reason">
+          <option value="">— Select a reason —</option>
+          <option value="collaboration">Project Collaboration</option>
+          <option value="resume">Resume Writing Services</option>
+          <option value="speaking">Anchoring / Speaking Engagement</option>
+          <option value="internship">Internship Opportunity</option>
+          <option value="general">General Enquiry</option>
+        </select>
+
+        <!-- Objective 3.4: label, textarea -->
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+
+        <!-- Objective 3.4: input checkbox -->
+        <label>
+          <input type="checkbox" name="consent" value="yes" required>
+          I consent to being contacted at the email address provided.
+        </label>
+
+        <br>
+        <!-- Objective 3.4: button submit and reset -->
+        <button type="submit">Send Message</button>
+        <button type="reset">Clear Form</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <hr>
+
+  <!-- Objective 3.2: Semantic footer -->
+  <footer>
+    <p>
+      &copy; 2026 Mohamed Afnnan Veettilayil &nbsp;|&nbsp;
+      <a href="mailto:afnnan.dev@gmail.com">afnnan.dev@gmail.com</a> &nbsp;|&nbsp;
+      <a href="https://linkedin.com/in/mohamedafnnan" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
+      <a href="https://github.com/mohamedafnnan" target="_blank">GitHub</a> &nbsp;|&nbsp;
+      <a href="resume.html">Full CV</a> &nbsp;|&nbsp;
+      <a href="#home" onclick="scrollToTop()">Back to Top</a>
+    </p>
+    <p class="section-label">Built with HTML and CSS — IT Specialist Exam Objectives 1.1 through 4.2</p>
+  </footer>
+
+</body>
+</html>
