@@ -1,547 +1,1612 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Mohamed Afnnan Veettilayil — EIE student at FISAT, embedded systems engineer, anchor, editor, and community builder.">
-  <meta name="keywords" content="Mohamed Afnnan, FISAT, EIE, Electronics, Instrumentation, Embedded Systems, IoT, Portfolio">
-
-  <title>Mohamed Afnnan Veettilayil — Portfolio</title>
-
-  <link rel="stylesheet" href="styles.css">
-
+...
+</footer>
+</body>
+</html>
+Tool Call
+Function Name:
+Write
+Arguments:
+file_path:
+/home/user/index.html
+content:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mohamed Afnnan Veettilayil — Electronics &
+Instrumentation Engineering student at FISAT. Google Student Ambassador.
+Embedded systems, IoT, and Verilog HDL.">
+<meta name="keywords" content="Mohamed Afnnan, FISAT, EIE, Embedded Systems,
+IoT, ESP32, Arduino, Verilog, Google Student Ambassador, Portfolio">
+<meta name="author" content="Mohamed Afnnan Veettilayil">
+<meta name="theme-color" content="#0a0e14">
+<title>Mohamed Afnnan Veettilayil — EIE Engineer & Builder</title>
+<style>
+/* ============ RESET & BASE ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter","Helvetica
+Neue",Arial,sans-serif;
+background:#0a0e14;
+color:#c9d1d9;
+line-height:1.65;
+font-size:16px;
+font-weight:400;
+letter-spacing:-0.005em;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+overflow-x:hidden;
+}
+:root{
+--bg:#0a0e14;
+--bg-elev:#11161f;
+--bg-elev-2:#161c28;
+--border:#1f2733;
+--border-strong:#2a3441;
+--text:#e6edf3;
+--text-dim:#8b96a8;
+--text-mute:#6b7585;
+--accent:#7c9eff;
+--accent-2:#5eead4;
+--accent-warm:#ffb86b;
+--grad:linear-gradient(135deg,#7c9eff 0%,#5eead4 100%);
+--shadow-sm:0 1px 2px rgba(0,0,0,.3);
+--shadow:0 4px 24px rgba(0,0,0,.4);
+--shadow-lg:0 12px 48px rgba(0,0,0,.5);
+--radius:14px;
+--radius-sm:8px;
+--maxw:1180px;
+}
+img,video{max-width:100%;height:auto;display:block}
+a{color:var(--accent);text-decoration:none;transition:color .2s ease}
+a:hover{color:var(--accent-2)}
+h1,h2,h3,h4,h5{font-weight:600;color:var(--text);letter-spacing:-0.02em;lineheight:1.25}
+h1{font-size:clamp(2.25rem,5.5vw,3.75rem);font-weight:700;letter-spacing:-0.0
+35em}
+h2{font-size:clamp(1.65rem,3.5vw,2.25rem);font-weight:600}
+h3{font-size:1.2rem;font-weight:600}
+h4{font-size:1rem;font-weight:600}
+p{color:var(--text-dim)}
+ul,ol{list-style:none}
+::selection{background:var(--accent);color:#0a0e14}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border-strong);border-radius:6px}
+::-webkit-scrollbar-thumb:hover{background:#3a4658}
+/* ============ LAYOUT ============ */
+.container{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+section{padding:96px 0;scroll-margin-top:80px}
+.section-head{margin-bottom:48px;max-width:760px}
+.eyebrow{
+display:inline-flex;align-items:center;gap:8px;
+font-size:.78rem;font-weight:500;
+color:var(--accent);
+text-transform:uppercase;letter-spacing:.18em;
+margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:24px;height:1px;background:var(--accent)}
+.section-title{margin-bottom:14px}
+.section-sub{color:var(--text-mute);font-size:1.02rem;max-width:620px}
+/* ============ HEADER / NAV ============ */
+.site-header{
+position:fixed;top:0;left:0;right:0;z-index:100;
+background:rgba(10,14,20,.78);
+backdrop-filter:saturate(180%) blur(14px);
+-webkit-backdrop-filter:saturate(180%) blur(14px);
+border-bottom:1px solid var(--border);
+}
+.nav-wrap{
+max-width:var(--maxw);margin:0 auto;
+padding:14px 28px;
+display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.brand{
+display:flex;align-items:center;gap:10px;
+font-weight:600;font-size:.95rem;color:var(--text);
+letter-spacing:-0.01em;
+}
+.brand-mark{
+width:30px;height:30px;border-radius:8px;
+background:var(--grad);
+display:grid;place-items:center;
+color:#0a0e14;font-weight:800;font-size:.85rem;
+box-shadow:0 4px 14px rgba(124,158,255,.35);
+}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-links a{
+color:var(--text-dim);font-size:.88rem;font-weight:500;
+padding:8px 14px;border-radius:8px;
+transition:all .2s ease;
+}
+.nav-links a:hover{color:var(--text);background:var(--bg-elev)}
+.nav-cta{
+background:var(--text);color:#0a0e14 !important;
+padding:9px 16px !important;border-radius:8px;
+font-weight:600 !important;
+}
+.nav-cta:hover{background:var(--accent-2) !important}
+/* mobile nav: collapses to compact pill */
+@media (max-width:820px){
+.nav-links{gap:0}
+.nav-links a{padding:7px 9px;font-size:.78rem}
+.nav-links a:not(.nav-cta){display:none}
+.nav-links .nav-cta{display:inline-block}
+.nav-mob{display:flex !important}
+}
+.nav-mob{display:none;gap:14px;align-items:center}
+.nav-mob a{color:var(--text-dim);font-size:.78rem;padding:6px 8px}
+/* ============ HERO ============ */
+.hero{
+position:relative;
+padding:160px 0 96px;
+overflow:hidden;
+border-bottom:1px solid var(--border);
+}
+.hero::before{
+content:"";position:absolute;inset:0;
+background:
+radial-gradient(700px 400px at 85% 10%,rgba(124,158,255,.12),transparent
+60%),
+radial-gradient(600px 380px at 10% 80%,rgba(94,234,212,.08),transparent
+60%);
+pointer-events:none;
+}
+.hero::after{
+content:"";position:absolute;inset:0;
+background-image:
+linear-gradient(rgba(124,158,255,.04) 1px,transparent 1px),
+linear-gradient(90deg,rgba(124,158,255,.04) 1px,transparent 1px);
+background-size:48px 48px;
+mask-image:radial-gradient(ellipse 80% 60% at 50% 40%,#000 0%,transparent
+80%);
+-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 40%,#000
+0%,transparent 80%);
+pointer-events:none;
+}
+.hero-grid{
+position:relative;z-index:1;
+display:grid;grid-template-columns:1.4fr 1fr;gap:64px;align-items:center;
+}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:48px}}
+.hero-status{
+display:inline-flex;align-items:center;gap:10px;
+padding:7px 14px;
+background:var(--bg-elev);
+border:1px solid var(--border-strong);
+border-radius:999px;
+font-size:.78rem;color:var(--text-dim);
+margin-bottom:24px;
+}
+.status-dot{
+width:7px;height:7px;border-radius:50%;background:#5eead4;
+box-shadow:0 0 0 4px rgba(94,234,212,.18);
+animation:pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+.hero h1 span.accent{
+background:var(--grad);
+-webkit-background-clip:text;background-clip:text;
+-webkit-text-fill-color:transparent;color:transparent;
+}
+.hero-role{
+font-size:1.05rem;color:var(--text);font-weight:500;
+margin:18px 0 8px;
+}
+.hero-role .pipe{color:var(--border-strong);margin:0 8px}
+.hero-desc{
+font-size:1.05rem;color:var(--text-dim);
+max-width:560px;margin:14px 0 32px;
+}
+.hero-meta{
+display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;
+}
+.meta-chip{
+display:inline-flex;align-items:center;gap:8px;
+padding:6px 12px;
+background:var(--bg-elev);
+border:1px solid var(--border);
+border-radius:999px;
+font-size:.78rem;color:var(--text-dim);
+}
+.meta-chip strong{color:var(--text);font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+display:inline-flex;align-items:center;gap:8px;
+padding:13px 22px;
+border-radius:10px;
+font-size:.92rem;font-weight:600;
+border:1px solid transparent;
+cursor:pointer;
+transition:all .22s ease;
+letter-spacing:-0.005em;
+}
+.btn-primary{
+background:var(--text);color:#0a0e14;
+}
+.btn-primary:hover{background:var(--accent-2);color:#0a0e14;transform:transla
+teY(-1px);box-shadow:0 10px 30px rgba(94,234,212,.2)}
+.btn-ghost{
+background:transparent;color:var(--text);
+border-color:var(--border-strong);
+}
+.btn-ghost:hover{background:var(--bg-elev);border-color:#3a4658;color:var(--t
+ext)}
+.btn .arrow{transition:transform .22s ease}
+.btn:hover .arrow{transform:translateX(3px)}
+/* Hero card / portrait */
+.hero-card{
+position:relative;
+background:var(--bg-elev);
+border:1px solid var(--border);
+border-radius:18px;
+padding:24px;
+box-shadow:var(--shadow-lg);
+}
+.portrait{
+position:relative;
+aspect-ratio:4/5;
+border-radius:12px;
+overflow:hidden;
+background:linear-gradient(135deg,#1a2230 0%,#0f1520 100%);
+border:1px solid var(--border-strong);
+display:grid;place-items:center;
+margin-bottom:18px;
+}
+.portrait-placeholder{
+text-align:center;padding:24px;color:var(--text-mute);font-size:.82rem;
+}
+.portrait-avatar{
+width:90px;height:90px;border-radius:50%;
+background:var(--grad);
+display:grid;place-items:center;
+font-size:2rem;font-weight:700;color:#0a0e14;
+margin:0 auto 16px;
+box-shadow:0 10px 30px rgba(124,158,255,.3);
+}
+.portrait-note{
+font-size:.7rem;color:var(--text-mute);
+margin-top:10px;letter-spacing:.05em;text-transform:uppercase;
+}
+.hero-card-stats{
+display:grid;grid-template-columns:1fr 1fr;gap:14px;
+}
+.stat{
+padding:12px 14px;
+background:var(--bg-elev-2);
+border:1px solid var(--border);
+border-radius:10px;
+}
+.stat-num{font-size:1.35rem;font-weight:700;color:var(--text);letter-spacing:
+-0.02em}
+.stat-label{font-size:.72rem;color:var(--text-mute);text-transform:uppercase;
+letter-spacing:.06em;margin-top:2px}
+/* Marquee strip */
+.trust-strip{
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+background:var(--bg-elev);
+padding:22px 0;
+}
+.trust-inner{
+display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+gap:18px 40px;
+color:var(--text-mute);
+font-size:.78rem;font-weight:500;
+letter-spacing:.08em;text-transform:uppercase;
+}
+.trust-inner span{display:inline-flex;align-items:center;gap:10px}
+.trust-inner
+span::before{content:"";width:5px;height:5px;border-radius:50%;background:var
+(--accent)}
+/* ============ ABOUT ============ */
+.about-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:48px}
+@media (max-width:820px){.about-grid{grid-template-columns:1fr;gap:32px}}
+.about-text p{font-size:1.02rem;margin-bottom:18px;color:var(--text-dim)}
+.about-text p strong{color:var(--text);font-weight:600}
+.facts-card{
+background:var(--bg-elev);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:24px;
+}
+.facts-card
+h4{margin-bottom:16px;font-size:.85rem;text-transform:uppercase;letter-spacin
+g:.1em;color:var(--text-mute)}
+.fact-row{
+display:flex;justify-content:space-between;align-items:flex-start;
+padding:12px 0;
+border-bottom:1px solid var(--border);
+font-size:.9rem;
+gap:14px;
+}
+.fact-row:last-child{border-bottom:none}
+.fact-row .k{color:var(--text-mute);min-width:90px}
+.fact-row .v{color:var(--text);text-align:right;font-weight:500}
+/* ============ LEADERSHIP / FEATURE GRID ============ */
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:18px;
+}
+.feature-card{
+position:relative;
+background:var(--bg-elev);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:24px;
+transition:transform .25s ease,border-color .25s ease,background .25s ease;
+}
+.feature-card:hover{transform:translateY(-3px);border-color:var(--border-stro
+ng);background:var(--bg-elev-2)}
+.feature-card.spotlight{
+background:linear-gradient(180deg,rgba(124,158,255,.08) 0%,var(--bg-elev)
+100%);
+border-color:rgba(124,158,255,.22);
+}
+.fc-tag{
+display:inline-block;
+font-size:.7rem;font-weight:600;
+letter-spacing:.1em;text-transform:uppercase;
+color:var(--accent);
+margin-bottom:12px;
+}
+.feature-card h3{margin-bottom:6px}
+.fc-meta{font-size:.78rem;color:var(--text-mute);margin-bottom:14px;font-weig
+ht:500}
+.feature-card p{font-size:.92rem;line-height:1.6}
+.fc-bullets{margin-top:12px}
+.fc-bullets li{
+position:relative;padding-left:18px;
+font-size:.9rem;color:var(--text-dim);
+margin-bottom:6px;line-height:1.55;
+}
+.fc-bullets li::before{
+content:"";position:absolute;left:0;top:9px;
+width:6px;height:6px;border-radius:50%;
+background:var(--accent);opacity:.6;
+}
+/* ============ PROJECTS ============ */
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+gap:22px;
+}
+.project-card{
+background:var(--bg-elev);
+border:1px solid var(--border);
+border-radius:var(--radius);
+overflow:hidden;
+transition:transform .3s ease,border-color .3s ease;
+display:flex;flex-direction:column;
+}
+.project-card:hover{transform:translateY(-4px);border-color:var(--border-stro
+ng)}
+.project-card.feature{
+grid-column:span 2;
+background:linear-gradient(135deg,rgba(124,158,255,.06) 0%,var(--bg-elev)
+60%);
+border-color:rgba(124,158,255,.2);
+}
+@media (max-width:760px){.project-card.feature{grid-column:span 1}}
+.project-cover{
+position:relative;
+aspect-ratio:16/9;
+background:linear-gradient(135deg,#1a2230 0%,#0f1520 100%);
+border-bottom:1px solid var(--border);
+display:grid;place-items:center;
+overflow:hidden;
+}
+.project-cover::before{
+content:"";position:absolute;inset:0;
+background-image:
+linear-gradient(rgba(124,158,255,.06) 1px,transparent 1px),
+linear-gradient(90deg,rgba(124,158,255,.06) 1px,transparent 1px);
+background-size:24px 24px;
+opacity:.5;
+}
+.project-icon{
+position:relative;z-index:1;
+font-family:"SF Mono","Monaco","Cascadia Code",monospace;
+font-size:2.2rem;font-weight:700;
+color:var(--accent);opacity:.85;
+letter-spacing:.04em;
+}
+.project-cover.feature-cover .project-icon{font-size:2.8rem}
+.project-body{padding:22px 24px;display:flex;flex-direction:column;flex:1}
+.project-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.pt{
+font-size:.7rem;font-weight:500;
+padding:3px 9px;
+background:var(--bg-elev-2);border:1px solid var(--border);
+border-radius:999px;color:var(--text-dim);
+}
+.project-body h3{margin-bottom:8px;font-size:1.15rem}
+.project-card.feature .project-body h3{font-size:1.3rem}
+.project-body p{font-size:.92rem;flex:1;line-height:1.6}
+.project-footer{
+display:flex;justify-content:space-between;align-items:center;
+margin-top:16px;padding-top:14px;
+border-top:1px solid var(--border);
+font-size:.82rem;color:var(--text-mute);
+}
+.project-footer a{font-weight:600;font-size:.85rem}
+/* ============ SKILLS ============ */
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:18px;
+}
+.skill-block{
+background:var(--bg-elev);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:24px;
+}
+.skill-block h4{
+font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;
+color:var(--accent);margin-bottom:14px;font-weight:600;
+}
+.skill-list{display:flex;flex-wrap:wrap;gap:6px}
+.skill-tag{
+font-size:.82rem;font-weight:500;
+padding:5px 11px;
+background:var(--bg-elev-2);
+border:1px solid var(--border);
+border-radius:7px;
+color:var(--text);
+transition:all .2s ease;
+}
+.skill-tag:hover{border-color:var(--accent);color:var(--accent)}
+/* ============ EXPERIENCE TIMELINE ============ */
+.timeline{
+position:relative;
+max-width:880px;
+margin:0 auto;
+}
+.timeline::before{
+content:"";position:absolute;
+left:14px;top:8px;bottom:8px;
+width:1px;background:var(--border-strong);
+}
+.tl-item{
+position:relative;
+padding-left:50px;
+padding-bottom:32px;
+}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+content:"";position:absolute;
+left:8px;top:7px;
+width:15px;height:15px;border-radius:50%;
+background:var(--bg);
+border:2px solid var(--accent);
+box-shadow:0 0 0 4px var(--bg);
+}
+.tl-item.current::before{background:var(--accent);box-shadow:0 0 0 4px
+var(--bg),0 0 0 7px rgba(124,158,255,.2)}
+.tl-date{
+font-size:.78rem;color:var(--text-mute);
+font-weight:500;text-transform:uppercase;letter-spacing:.05em;
+margin-bottom:4px;
+}
+.tl-role{font-size:1.05rem;color:var(--text);font-weight:600;margin-bottom:2p
+x}
+.tl-org{font-size:.92rem;color:var(--accent);margin-bottom:8px;font-weight:50
+0}
+.tl-desc{font-size:.92rem;color:var(--text-dim);line-height:1.6}
+/* ============ CERTS / AWARDS ============ */
+.dual-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:820px){.dual-grid{grid-template-columns:1fr}}
+.list-card{
+background:var(--bg-elev);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:24px;
+}
+.list-card h3{
+font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;
+color:var(--text-mute);margin-bottom:18px;font-weight:600;
+}
+.list-card ul li{
+padding:11px 0;
+border-bottom:1px solid var(--border);
+font-size:.92rem;color:var(--text);
+display:flex;align-items:flex-start;gap:12px;
+line-height:1.5;
+}
+.list-card ul li:last-child{border-bottom:none}
+.list-card ul li::before{
+content:"";flex-shrink:0;
+width:6px;height:6px;border-radius:50%;
+background:var(--accent);
+margin-top:9px;
+}
+.award-badge{
+display:inline-block;font-size:.7rem;font-weight:600;
+padding:2px 7px;background:rgba(255,184,107,.12);
+color:var(--accent-warm);border-radius:4px;
+margin-right:8px;text-transform:uppercase;letter-spacing:.05em;
+}
+.list-card ul li
+small{display:block;color:var(--text-mute);font-size:.8rem;margin-top:2px;fon
+t-weight:400}
+/* ============ MEDIA GALLERY ============ */
+.media-grid{
+display:grid;
+grid-template-columns:1.4fr 1fr;
+gap:22px;
+}
+@media (max-width:820px){.media-grid{grid-template-columns:1fr}}
+.media-card{
+background:var(--bg-elev);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:22px;
+}
+.media-card h3{margin-bottom:6px;font-size:1.05rem}
+.media-card
+.media-meta{font-size:.82rem;color:var(--text-mute);margin-bottom:16px}
+.media-frame{
+background:var(--bg);
+border:1px solid var(--border);
+border-radius:var(--radius-sm);
+overflow:hidden;
+}
+.media-frame video{width:100%;display:block;background:#000}
+.media-frame audio{width:100%;display:block}
+.placeholder-frame{
+aspect-ratio:16/9;
+display:grid;place-items:center;
+background:linear-gradient(135deg,#1a2230 0%,#0f1520 100%);
+color:var(--text-mute);
+text-align:center;padding:24px;
+border:1px dashed var(--border-strong);
+border-radius:var(--radius-sm);
+}
+.placeholder-frame
+.ph-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color
+:var(--accent);margin-bottom:8px;font-weight:600}
+.placeholder-frame .ph-text{font-size:.88rem;line-height:1.5;max-width:300px}
+/* ============ EDUCATION ============ */
+.edu-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.edu-row{
+display:grid;grid-template-columns:1fr 2fr 1fr;
+gap:24px;
+background:var(--bg-elev);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:22px 24px;
+align-items:center;
+}
+@media (max-width:760px){
+.edu-row{grid-template-columns:1fr;gap:8px}
+}
+.edu-period{font-size:.82rem;color:var(--text-mute);font-weight:500}
+.edu-row h3{margin-bottom:4px;font-size:1.05rem}
+.edu-school{color:var(--accent);font-size:.88rem;font-weight:500;margin-botto
+m:2px}
+.edu-note{font-size:.85rem;color:var(--text-dim);line-height:1.5}
+.edu-status{
+font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;
+color:var(--text-mute);font-weight:600;
+justify-self:end;
+}
+@media (max-width:760px){.edu-status{justify-self:start}}
+/* ============ CONTACT ============ */
+.contact-grid{
+display:grid;grid-template-columns:1fr 1.3fr;gap:48px;
+}
+@media (max-width:820px){.contact-grid{grid-template-columns:1fr;gap:32px}}
+.contact-card{
+background:var(--bg-elev);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:28px;
+}
+.contact-channels{display:flex;flex-direction:column;gap:10px;margin-top:20px
+}
+.channel{
+display:flex;align-items:center;justify-content:space-between;
+padding:14px 18px;
+background:var(--bg-elev-2);
+border:1px solid var(--border);
+border-radius:10px;
+transition:all .22s ease;
+}
+.channel:hover{border-color:var(--accent);transform:translateX(3px)}
+.channel-l{display:flex;align-items:center;gap:14px}
+.channel-icon{
+width:34px;height:34px;border-radius:8px;
+background:var(--bg);
+display:grid;place-items:center;
+font-weight:700;font-size:.78rem;
+color:var(--accent);
+border:1px solid var(--border);
+}
+.channel-name{font-size:.85rem;color:var(--text-mute)}
+.channel-value{font-size:.92rem;color:var(--text);font-weight:500}
+.channel-arrow{color:var(--text-mute);font-size:.9rem}
+/* Form */
+.contact-form{
+background:var(--bg-elev);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:28px;
+}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:span 2}
+@media (max-width:540px){
+.form-grid{grid-template-columns:1fr}
+.form-group.full{grid-column:span 1}
+}
+.form-group label{
+font-size:.78rem;font-weight:500;color:var(--text-dim);
+text-transform:uppercase;letter-spacing:.06em;
+}
+.form-group input,
+.form-group select,
+.form-group textarea{
+background:var(--bg);
+border:1px solid var(--border);
+border-radius:8px;
+padding:11px 14px;
+color:var(--text);
+font-size:.92rem;
+font-family:inherit;
+transition:border-color .2s ease,background .2s ease;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+outline:none;
+border-color:var(--accent);
+background:var(--bg-elev-2);
+}
+.form-group textarea{resize:vertical;min-height:120px;line-height:1.55}
+.form-group input::placeholder,
+.form-group textarea::placeholder{color:var(--text-mute)}
+.form-actions{display:flex;gap:10px;margin-top:8px;grid-column:span 2}
+@media (max-width:540px){.form-actions{grid-column:span 1}}
+/* ============ FOOTER ============ */
+footer{
+border-top:1px solid var(--border);
+padding:48px 0 32px;
+background:var(--bg-elev);
+}
+.footer-top{
+display:grid;grid-template-columns:1.5fr 1fr 1fr;
+gap:36px;margin-bottom:36px;
+}
+@media (max-width:760px){.footer-top{grid-template-columns:1fr;gap:28px}}
+.footer-brand{font-size:1.1rem;font-weight:600;color:var(--text);margin-botto
+m:10px}
+.footer-tag{font-size:.88rem;color:var(--text-mute);max-width:340px;line-heig
+ht:1.6}
+.footer-col
+h5{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--
+text-mute);margin-bottom:14px;font-weight:600}
+.footer-col ul li{margin-bottom:8px;font-size:.88rem}
+.footer-col ul li a{color:var(--text-dim)}
+.footer-col ul li a:hover{color:var(--accent)}
+.footer-bottom{
+display:flex;justify-content:space-between;align-items:center;
+padding-top:24px;border-top:1px solid var(--border);
+font-size:.8rem;color:var(--text-mute);
+flex-wrap:wrap;gap:12px;
+}
+.footer-bottom .built{color:var(--text-mute)}
+/* ============ PRINT ============ */
+@media print{
+.site-header,.hero::after,.hero::before,.trust-strip,#contact
+form,footer{display:none}
+body{background:#fff;color:#000}
+}
+</style>
 </head>
-
 <body>
-  <header>
-    <h1>Mohamed Afnnan Veettilayil</h1>
-
-    <p style="font-style: italic; color: #003366;">
-      EIE Undergrad &nbsp;·&nbsp; Embedded Systems &nbsp;·&nbsp; Anchor &nbsp;·&nbsp; Editor &nbsp;·&nbsp; Community Builder
-    </p>
-
-    <p>
-      Thrissur, Kerala &nbsp;|&nbsp;
-      <a href="tel:+918891508831">+91-8891508831</a> &nbsp;|&nbsp;
-      <a href="mailto:afnnan.dev@gmail.com">afnnan.dev@gmail.com</a> &nbsp;|&nbsp;
-      <a href="https://linkedin.com/in/mohamedafnnan" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
-      <a href="https://github.com/mohamedafnnan" target="_blank">GitHub</a> &nbsp;|&nbsp;
-      <a href="https://linktr.ee/mohamedafnnan" target="_blank">Linktree</a> &nbsp;|&nbsp;
-      <a href="resume.html">Full CV</a>
-    </p>
-    <hr>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#media-gallery">Media Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <hr>
-
-  <main>
-
-    <!-- Objective 3.2: section | Objective 3.3: bookmark id="home" -->
-    <section id="home">
-      <h2>Home</h2>
-
-      <!-- Objective 3.1: div, span -->
-      <div id="home-intro">
-        <p>
-          Welcome to my portfolio. I am a
-          <span class="role-title">B.Tech Electronics and Instrumentation Engineering</span>
-          student at FISAT, Angamaly, Kerala — equally at home soldering a microcontroller,
-          anchoring a national-level event, editing a department publication, or building a
-          community tool from scratch.
-        </p>
-        <p>
-          Use the navigation above to jump to any section, or view my
-          <!-- Objective 3.3: relative link -->
-          <a href="resume.html">complete CV here</a>.
-        </p>
-      </div>
-      <figure>
-        <img
-          src="profile.jpg"
-          alt="Mohamed Afnnan Veettilayil — profile photo"
-          width="220"
-          class="profile-img"
-          usemap="#profile-map">
-        
-        <map name="profile-map">
-          <area
-            shape="rect"
-            coords="0,0,110,300"
-            href="https://linkedin.com/in/mohamedafnnan"
-            target="_blank"
-            alt="Visit LinkedIn profile">
-          <area
-            shape="rect"
-            coords="110,0,220,300"
-            href="#about"
-            alt="Go to About section">
-        </map>
-
-        <figcaption>Mohamed Afnnan — Click left half for LinkedIn, right half for About</figcaption>
-      </figure>
-
-    </section>
-
-    <hr>
-
-    <section id="about">
-      <h2>About</h2>
-
-      <p>
-        B.Tech Electronics and Instrumentation Engineering student at FISAT — equally at home
-        soldering a microcontroller, anchoring a national-level event, editing a department
-        publication, or building a community tool from scratch. Hands-on experience across
-        embedded systems, Verilog HDL, IoT, and cybersecurity fundamentals, paired with a
-        consistent track record in technical leadership, documentation, and real-world project
-        delivery.
-      </p>
-
-      <aside>
-        <p><strong>Quick Facts</strong></p>
-        <ul>
-          <li>Institution: FISAT, Angamaly, Kerala</li>
-          <li>Branch: Electronics and Instrumentation Engineering</li>
-          <li>Semester: S2 (Completed) | Batch: 2025–2029</li>
-          <li>India Book of Records: Fastest Left-Handed Typist — 80 WPM</li>
-        </ul>
-      </aside>
-
-      <details>
-        <summary>Languages I Speak</summary>
-        <table>
-          <tr><th>Language</th><th>Proficiency</th></tr>
-          <tr><td>Malayalam</td><td>Native</td></tr>
-          <tr><td>English</td><td>Native</td></tr>
-          <tr><td>Arabic</td><td>Elementary</td></tr>
-          <tr><td>German</td><td>Limited Working (IGCSE base)</td></tr>
-        </table>
-      </details>
-
-      <details>
-        <summary>Interests &amp; Focus Areas</summary>
-        <ul>
-          <li>VLSI &amp; Digital Design</li>
-          <li>Instrumentation &amp; Control Systems</li>
-          <li>Industrial Automation</li>
-          <li>IoT &amp; Edge Hardware</li>
-          <li>Cybersecurity &amp; Secure Systems</li>
-          <li>Cost-Efficient Scalable Systems</li>
-          <li>Technical Communication</li>
-          <li>Embedded Systems</li>
-          <li>Signal Processing</li>
-          <li>Hardware-Software Integration</li>
-          <li>Open-Source Engineering Education</li>
-        </ul>
-      </details>
-
-    </section>
-
-    <hr>
-
-    <section id="education">
-      <h2>Education</h2>
-
-      <table>
-        <tr>
-          <th>Institution</th>
-          <th>Qualification</th>
-          <th>Period</th>
-          <th>Details</th>
-        </tr>
-        <tr>
-          <td>Federal Institute of Science and Technology (FISAT), Angamaly, Kerala</td>
-          <td>B.Tech, Electronics and Instrumentation Engineering</td>
-          <td>August 2025 – September 2029</td>
-          <td>
-            S2 (Completed)<br>
-            Coursework: Engineering Mathematics, Basic Electrical Engineering, Electronic Devices, Engineering Physics, C Programming, Logic Circuit Design<br>
-            Involvement: ISA, IEEE, IEEE-RAS, IEDC, AICTE IDEA Lab
-          </td>
-        </tr>
-        <tr>
-          <td>Ansar English School, Perumpilavu, Kerala</td>
-          <td>CBSE Grade 12, Science</td>
-          <td>May 2025</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>Devamatha CMI International School, Thangaloor, Kerala</td>
-          <td>Cambridge IGCSE (Grade 10)</td>
-          <td>—</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>Dukhan English School, Dukhan, Qatar</td>
-          <td>UK National Curriculum (Grade 8)</td>
-          <td>—</td>
-          <td>—</td>
-        </tr>
-      </table>
-    </section>
-
-    <hr>
-
-    <section id="skills">
-      <h2>Skills</h2>
-
-      <article>
-        <h3>Technical Skills</h3>
-        <table>
-          <tr>
-            <th>Category</th>
-            <th>Details</th>
-          </tr>
-          <tr>
-            <td>HDL &amp; Digital Design</td>
-            <td>Verilog HDL, EDA Playground, D/JK/T Flip-Flops, Ripple Counters, Full Adder, Half Adder, Gate-Level Design, RTL Simulation</td>
-          </tr>
-          <tr>
-            <td>Languages</td>
-            <td>Python, C, Embedded C, Shell Programming, HTML/CSS/JavaScript</td>
-          </tr>
-          <tr>
-            <td>Hardware &amp; Embedded</td>
-            <td>Arduino, ESP32, Microcontroller Programming (AVR/ESP32), Sensor Interfacing, Circuit Analysis, IoT Fundamentals, Signal Conditioning</td>
-          </tr>
-          <tr>
-            <td>Software &amp; Tools</td>
-            <td>MATLAB, Git, Linux/UNIX, Adobe Photoshop, Fusion 360, Audacity, Arduino IDE, OBS Studio, ChatGPT, Claude, Gemini, MS Office Suite</td>
-          </tr>
-          <tr>
-            <td>Core Concepts</td>
-            <td>Embedded Systems, Circuit Design, IoT, FSM Design, Real-Time Systems, Cybersecurity Fundamentals, Technical Documentation</td>
-          </tr>
-        </table>
-      </article>
-
-      <article>
-        <h3>Professional Skills</h3>
- 
-        <ul>
-          <li>Event Coordination</li>
-          <li>Technical Leadership</li>
-          <li>Community Outreach</li>
-          <li>Project Documentation</li>
-          <li>Creative Problem-Solving</li>
-          <li>Technical Writing</li>
-          <li>Visual Communication</li>
-          <li>Public Speaking &amp; Presentation</li>
-          <li>Research &amp; Compilation</li>
-          <li>Administrative Process Design</li>
-          <li>Resume Writing</li>
-          <li>Content Creation</li>
-        </ul>
-      </article>
-    </section>
-
-    <hr>
-
-    <section id="experience">
-      <h2>Experience</h2>
-
-      <article>
-        <h3>Technical</h3>
-        <section>
-          <h4>IoT Specialist — AICTE IDEA Lab Project Team, FISAT</h4>
-          <p class="date-range">March 2026 – Present</p>
-          <ul>
-            <li>Contributing embedded systems and IoT integration to the Smart Sensor-Based Traffic Alert System for hairpin bend highway safety</li>
-            <li>Handling sensor selection, signal conditioning logic, and embedded firmware planning</li>
-          </ul>
-        </section>
-        <section>
-          <h4>IDEA Lab Student Representative — AICTE IDEA Lab, FISAT</h4>
-          <p class="date-range">March 2026 – Present</p>
-          <ul>
-            <li>Scheduled and tracked interviews for Robotics Factory shortlisting</li>
-          </ul>
-        </section>
-      </article>
-
-      <article>
-        <h3>Leadership &amp; Representation</h3>
-        <section>
-          <h4>Google Student Ambassador — Google</h4>
-          <p class="date-range">April 2026 – Present</p>
-          <ul>
-            <li>Selected through competitive psychometric and video submission process; onboarding ahead of campus events in S3</li>
-          </ul>
-        </section>
-        <section>
-          <h4>Student Representative &amp; Core Outreach Lead — ISA, FISAT</h4>
-          <p class="date-range">December 2025 – Present</p>
-          <ul>
-            <li>1st Year ISA Student Representative; coordinated technical workshops; drove registrations for national techathon</li>
-          </ul>
-        </section>
-        <section>
-          <h4>Class Representative — FISAT EIE Department</h4>
-          <p class="date-range">August 2025 – February 2026</p>
-          <ul>
-            <li>Primary liaison between faculty and the 2025-29 EIE batch</li>
-          </ul>
-        </section>
-        <section>
-          <h4>Administrative Associate — FISAT EIE Department</h4>
-          <p class="date-range">August 2025 – Present</p>
-          <ul>
-            <li>Designed duty leave and prayer attendance forms adopted department-wide</li>
-          </ul>
-        </section>
-      </article>
-
-      <article>
-        <h3>Events, Media &amp; Communication</h3>
-        <section>
-          <h4>Chief Editor — Metron, EIE Department Newsletter Vol. 9</h4>
-          <p class="date-range">March 2026 – Present</p>
-          <ul>
-            <li>Sole Chief Editor reaching 240+ students and 20+ faculty; managing content, layout, and publication end-to-end</li>
-          </ul>
-        </section>
-        <section>
-          <h4>Anchoring Lead — TANTRA'26, ISTE FISAT</h4>
-          <p class="date-range">February 2026</p>
-          <ul>
-            <li>Led anchoring for national-level technical event; managed scripting, spontaneous delivery, and audience engagement</li>
-          </ul>
-        </section>
-        <section>
-          <h4>Resource Person — AICTE IDEA Lab, FISAT</h4>
-          <p class="date-range">May 2026</p>
-          <ul>
-            <li>Delivered LinkedIn and resume-building sessions for 11 Class 10–12 students; recommended by Dr. Abi P Mathew</li>
-          </ul>
-        </section>
-        <section>
-          <h4>Freelance Resume Writer — Self-Employed</h4>
-          <p class="date-range">May 2026 – Present</p>
-          <ul>
-            <li>ATS-optimized resumes and LinkedIn profiles; authored open-source ATS Resume Guide</li>
-          </ul>
-        </section>
-      </article>
-    </section>
-
-    <hr>
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-  
-      <figure>
-        <img
-          src="project.jpg"
-          alt="Screenshot of KTU SGPA/CGPA Calculator"
-          width="300">
-        <figcaption>KTU 2024 Scheme SGPA/CGPA Calculator — built and deployed for KTU students</figcaption>
-      </figure>
-
-      <article>
-        <h3>Solar Copra Dryer</h3>
-        <p class="date-range">Renewable Energy, Thermal Systems | FISAT, 2025–2026 | Supervisor: Dr. Abi P Mathew</p>
-        <ul>
-          <li>Led a 10-member team designing a solar-powered copra dryer for Kudumbashree cooperative farmers</li>
-          <li>System design, documentation, community coordination, and grant applications (EPICS in IEEE, IEEE-RAS IROS 2026 Travel Grant)</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>Electronic Voting Machine (EVM)</h3>
-        <p class="date-range">Circuit Design, Embedded C | July 2024 – February 2025</p>
-        <ul>
-          <li>Complete EVM deployed for actual school elections with zero errors; appreciation letter from principal; still in active use</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>Smart Sensor-Based Traffic Alert System</h3>
-        <p class="date-range">ESP32, Embedded C, IoT | AICTE IDEA Lab, March 2026 – Present</p>
-        <ul>
-          <li>Real-time FSM-driven alert system for hairpin bend highway safety</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>KEAM Student Admissions Helpdesk</h3>
-        <p class="date-range">WhatsApp, Instagram | April 2025 – Present</p>
-        <ul>
-          <li>Assisted 50+ students through KEAM rank, allotment rounds, and college selection counselling</li>
-          <li>Produced allotment infographics and explainer content for first-generation applicants</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>KTU 2024 Scheme SGPA/CGPA Calculator Website</h3>
-        <p class="date-range">HTML, CSS, JavaScript | December 2025</p>
-        <ul>
-          <li>Built and deployed web-based academic calculator; used by 40+ engineering students</li>
-        </ul>
-        <p><a href="https://github.com/mohamedafnnan" target="_blank">View on GitHub →</a></p>
-      </article>
-
-      <article>
-        <h3>Verilog HDL Digital Design</h3>
-        <p class="date-range">Verilog, EDA Playground | S2 EIE Lab, 2026</p>
-        <ul>
-          <li>D, JK, T flip-flops and 4-bit ripple counter with waveform verification; earliest Verilog exposure in KTU EIE curriculum</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>EIE 101 Blog</h3>
-        <p class="date-range">Technical Writing | Ongoing</p>
-        <ul>
-          <li>Writing series on instrumentation and embedded systems fundamentals for first-year EIE students</li>
-        </ul>
-      </article>
-
-    </section>
-
-    <hr>
-
-    <section id="certifications">
-      <h2>Certifications &amp; Achievements</h2>
-
-      <article>
-        <h3>Certifications</h3>
-        
-        <ol>
-          <li>ISC2 Certified in Cybersecurity (CC) — In Progress</li>
-          <li>Microsoft Certified: Azure AI Fundamentals</li>
-          <li>Python Programming and Essentials (Coursera)</li>
-          <li>MATLAB Fundamentals Certification (NSDC)</li>
-          <li>ESP32 Bootcamp Certification (IDEA, FISAT)</li>
-          <li>Arduino Bootcamp Workshop Certification (IDEA × ISA, FISAT)</li>
-          <li>Toastmasters Youth Leadership Programme | Dukhan, Qatar</li>
-          <li>Typing Speed: 80 WPM left-handed (India Book of Records, video verified)</li>
-        </ol>
-      </article>
-
-      <article>
-        <h3>Awards &amp; Recognition</h3>
-        <div class="award-item"><strong>India Book of Records</strong> — Fastest Left-Handed Typist: 80 WPM (2025)</div>
-        <div class="award-item"><strong>1st Prize</strong> — Innomark Logo Design Challenge, IDEA Club FISAT (2025)</div>
-        <div class="award-item"><strong>Appreciation Letter</strong> — EVM Project, from School Principal (2025)</div>
-        <div class="award-item"><strong>Inter-School Win</strong> — Class Magazine Design Competition (2024)</div>
-      </article>
-
-      <article>
-        <h3>Publications &amp; Resources</h3>
-        <ul>
-          <li><strong>ATS Resume Guide for Engineering Students</strong> (2026)</li>
-          <li><strong>KTU 2024 Scheme Group B Compiled Academic Resources (EIE)</strong></li>
-          <li><strong>KTU 2024 Scheme SGPA/CGPA Calculator Website</strong></li>
-          <li><strong>EIE 101 Blog</strong></li>
-        </ul>
-      </article>
-    </section>
-
-    <hr>
-
-    <section id="media-gallery">
-      <h2>Media Gallery</h2>
-
-      <article>
-        <h3>India Book of Records — 80 WPM Left-Handed Typing</h3>
-        <video width="480" controls poster="profile.jpg">
-          <source src="typing.mp4" type="video/mp4">
-          <track kind="subtitles" src="subtitles.vtt" srclang="en" label="English" default>
-        </video>
-      </article>
-
-      <article>
-        <h3>Just the Two of Us — Bill Withers &amp; Grover Washington Jr.</h3>
-        <audio controls>
-          <source src="audio.mp3" type="audio/mpeg">
-        </audio>
-      </article>
-
-      <article>
-        <h3>GitHub Profile</h3>
-        
-        <iframe
-          src="https://github.com/mohamedafnnan"
-          width="700"
-          height="400"
-          title="Mohamed Afnnan GitHub Profile">
-        </iframe>
-      </article>
-
-    </section>
-
-    <hr>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Reach me at <a href="mailto:afnnan.dev@gmail.com">afnnan.dev@gmail.com</a> or fill the form below.</p>
-
-      <form action="mailto:afnnan.dev@gmail.com" method="get">
-
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Your full name" required>
-
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-
-        <label for="phone">Phone Number (optional)</label>
-        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
-
-        <label for="reason">Reason for Contact</label>
-        <select id="reason" name="reason">
-          <option value="">— Select a reason —</option>
-          <option value="collaboration">Project Collaboration</option>
-          <option value="resume">Resume Writing Services</option>
-          <option value="speaking">Anchoring / Speaking Engagement</option>
-          <option value="internship">Internship Opportunity</option>
-          <option value="general">General Enquiry</option>
-        </select>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
-
-        <label>
-          <input type="checkbox" name="consent" value="yes" required>
-          I consent to being contacted at the email address provided.
-        </label>
-
-        <br>
-        <button type="submit">Send Message</button>
-        <button type="reset">Clear Form</button>
-
-      </form>
-    </section>
-
-  </main>
-
-  <hr>
-
-  <footer>
-    <p>
-      &copy; 2026 Mohamed Afnnan Veettilayil &nbsp;|&nbsp;
-      <a href="mailto:afnnan.dev@gmail.com">afnnan.dev@gmail.com</a> &nbsp;|&nbsp;
-      <a href="https://linkedin.com/in/mohamedafnnan" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
-      <a href="https://github.com/mohamedafnnan" target="_blank">GitHub</a> &nbsp;|&nbsp;
-      <a href="resume.html">Full CV</a> &nbsp;|&nbsp;
-      <a href="#home" onclick="scrollToTop()">Back to Top</a>
-    </p>
-    <p class="section-label">Built with HTML and CSS — IT Specialist Exam Objectives 1.1 through 4.2</p>
-  </footer>
-
+<header class="site-header">
+<div class="nav-wrap">
+<a href="#top" class="brand">
+<span class="brand-mark">A</span>
+<span>Mohamed Afnnan</span>
+</a>
+<nav class="nav-links">
+<a href="#about">About</a>
+<a href="#leadership">Leadership</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#certifications">Awards</a>
+<a href="#contact" class="nav-cta">Get in touch</a>
+</nav>
+<div class="nav-mob">
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</header>
+<main id="top">
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-grid">
+<div class="hero-left">
+<div class="hero-status">
+<span class="status-dot"></span>
+Open to internships &amp; collaborations · Summer 2027
+</div>
+<h1>Building <span class="accent">embedded systems</span><br>that
+quietly do their job.</h1>
+<p class="hero-role">
+Electronics &amp; Instrumentation Engineering Student
+<span class="pipe">·</span> FISAT
+</p>
+<p class="hero-desc">
+First-year B.Tech student at FISAT, Angamaly. I work across
+firmware, sensor systems, and Verilog HDL — and lead student technical
+communities on the side. Currently building a sensor-based highway safety
+alert system at the AICTE IDEA Lab.
+</p>
+<div class="hero-meta">
+<span class="meta-chip"><strong>Google</strong> Student
+Ambassador</span>
+<span class="meta-chip"><strong>ISA</strong> Student
+Representative</span>
+<span class="meta-chip"><strong>IDEA Lab</strong>
+Representative</span>
+<span class="meta-chip"><strong>Chief Editor</strong> · Metron
+Vol. 9</span>
+</div>
+<div class="cta-row">
+<a href="#projects" class="btn btn-primary">View selected work
+<span class="arrow">→</span></a>
+<a href="#contact" class="btn btn-ghost">Get in touch</a>
+</div>
+</div>
+<aside class="hero-card">
+<figure class="portrait">
+<div class="portrait-placeholder">
+<div class="portrait-avatar">MA</div>
+<div>Mohamed Afnnan Veettilayil</div>
+<div class="portrait-note">Replace with profile.jpg</div>
+</div>
+</figure>
+<div class="hero-card-stats">
+<div class="stat">
+<div class="stat-num">5+</div>
+<div class="stat-label">Leadership Roles</div>
+</div>
+<div class="stat">
+<div class="stat-num">9</div>
+<div class="stat-label">Projects Shipped</div>
+</div>
+<div class="stat">
+<div class="stat-num">80</div>
+<div class="stat-label">WPM · IBR Record</div>
+</div>
+<div class="stat">
+<div class="stat-num">240+</div>
+<div class="stat-label">Newsletter Reach</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<!-- ============ TRUST STRIP ============ -->
+<div class="trust-strip">
+<div class="container">
+<div class="trust-inner">
+<span>Google</span>
+<span>AICTE IDEA Lab</span>
+<span>ISA</span>
+<span>IEEE-RAS</span>
+<span>IEDC FISAT</span>
+<span>ISTE</span>
+<span>India Book of Records</span>
+</div>
+</div>
+</div>
+<!-- ============ ABOUT ============ -->
+<section id="about">
+<div class="container">
+<div class="section-head">
+<span class="eyebrow">About</span>
+<h2 class="section-title">An engineering student who ships, leads,
+and writes.</h2>
+<p class="section-sub">Equally at home soldering a microcontroller,
+anchoring a national-level event, editing a department publication, or
+building a community tool from scratch.</p>
+</div>
+<div class="about-grid">
+<div class="about-text">
+<p>
+I'm <strong>Mohamed Afnnan Veettilayil</strong>, a first-year
+B.Tech Electronics and Instrumentation Engineering student at the
+<strong>Federal Institute of Science and Technology (FISAT)</strong>,
+Angamaly, Kerala. My focus sits at the intersection of <strong>embedded
+systems, instrumentation, and real-world community impact</strong>.
+</p>
+<p>
+Outside of coursework, I serve as a <strong>Google Student
+Ambassador</strong>, an <strong>ISA Student Representative</strong>, the
+<strong>IDEA Lab Student Representative</strong> at FISAT, and the sole
+<strong>Chief Editor</strong> of Metron, the EIE department newsletter that
+reaches over 240 students and 20 faculty members.
+</p>
+<p>
+I build things that get used: an EVM still running school
+elections, an SGPA calculator used by 40+ students, an open-source ATS resume
+guide adopted in workshops, and an admissions helpdesk that walked 50+
+first-generation applicants through KEAM counselling. I care more about
+<strong>what reaches people</strong> than about what stays on a slide.
+</p>
+</div>
+<aside class="facts-card">
+<h4>Quick Facts</h4>
+<div class="fact-row">
+<span class="k">Institution</span>
+<span class="v">FISAT, Angamaly</span>
+</div>
+<div class="fact-row">
+<span class="k">Programme</span>
+<span class="v">B.Tech EIE · 2025–29</span>
+</div>
+<div class="fact-row">
+<span class="k">Semester</span>
+<span class="v">S2 Completed</span>
+</div>
+<div class="fact-row">
+<span class="k">Based in</span>
+<span class="v">Thrissur, Kerala</span>
+</div>
+<div class="fact-row">
+<span class="k">Record</span>
+<span class="v">IBR · 80 WPM (Left-Handed)</span>
+</div>
+<div class="fact-row">
+<span class="k">Languages</span>
+<span class="v">Malayalam · English · Arabic · German</span>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<!-- ============ LEADERSHIP ============ -->
+<section id="leadership">
+<div class="container">
+<div class="section-head">
+<span class="eyebrow">Leadership &amp; Representation</span>
+<h2 class="section-title">Roles I currently hold.</h2>
+<p class="section-sub">Selected for their technical relevance, scale,
+and what they actually demanded — not their titles.</p>
+</div>
+<div class="feature-grid">
+<article class="feature-card spotlight">
+<span class="fc-tag">Selected · Apr 2026</span>
+<h3>Google Student Ambassador</h3>
+<p class="fc-meta">Google</p>
+<p>Selected through a competitive psychometric and video submission
+process. Onboarding ahead of campus events and community initiatives in S3,
+representing Google's developer ecosystem on the FISAT campus.</p>
+</article>
+<article class="feature-card">
+<span class="fc-tag">Active · Mar 2026 –</span>
+<h3>IDEA Lab Student Representative</h3>
+<p class="fc-meta">AICTE IDEA Lab, FISAT</p>
+<p>Scheduling and tracking interviews for Robotics Factory
+shortlisting; maintaining candidate status records across selection
+rounds.</p>
+</article>
+<article class="feature-card">
+<span class="fc-tag">Active · Dec 2025 –</span>
+<h3>ISA Student Representative</h3>
+<p class="fc-meta">International Society of Automation, FISAT</p>
+<p>1st-year representative; coordinated technical workshops and
+helped first-year members transition into professional work culture. Joined
+the Core Outreach Team for the ISA national techathon.</p>
+</article>
+<article class="feature-card">
+<span class="fc-tag">Aug 2025 – Feb 2026</span>
+<h3>Class Representative</h3>
+<p class="fc-meta">FISAT · EIE Department</p>
+<p>Primary liaison between faculty and the 2025–29 EIE batch —
+managed academic updates, deadline communication, and fund collection across
+the semester.</p>
+</article>
+<article class="feature-card">
+<span class="fc-tag">Active · Mar 2026 –</span>
+<h3>Chief Editor — Metron Vol. 9</h3>
+<p class="fc-meta">EIE Department Newsletter, FISAT</p>
+<p>Sole Chief Editor for the department newsletter reaching 240+
+students and 20+ faculty &amp; staff. Managing content, layout, and
+publication end-to-end.</p>
+</article>
+<article class="feature-card">
+<span class="fc-tag">Feb 2026</span>
+<h3>Anchoring Lead — TANTRA'26</h3>
+<p class="fc-meta">ISTE FISAT · National Technical Event</p>
+<p>Led anchoring for a national-level technical event: scripting,
+spontaneous delivery, audience engagement, and real-time schedule
+coordination with the organising team.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+<div class="container">
+<div class="section-head">
+<span class="eyebrow">Selected Projects</span>
+<h2 class="section-title">Things I've built and shipped.</h2>
+<p class="section-sub">Hardware, firmware, web tools, and community
+resources — measured by whether they actually get used.</p>
+</div>
+<div class="projects-grid">
+<article class="project-card feature">
+<div class="project-cover feature-cover">
+<span class="project-icon">&lt;/&gt; ESP32</span>
+</div>
+<div class="project-body">
+<div class="project-tags">
+<span class="pt">ESP32</span><span class="pt">Embedded
+C</span><span class="pt">IoT</span><span class="pt">FSM Design</span>
+</div>
+<h3>Smart Sensor-Based Traffic Alert System</h3>
+<p>Real-time FSM-driven alert system for hairpin-bend highway
+safety, being developed at the AICTE IDEA Lab. Responsible for sensor
+selection, signal-conditioning logic, and embedded firmware planning, with
+full system-architecture documentation for the final deliverable.</p>
+<div class="project-footer">
+<span>AICTE IDEA Lab · In progress</span>
+<span>Mar 2026 – Present</span>
+</div>
+</div>
+</article>
+<article class="project-card">
+<div class="project-cover"><span
+class="project-icon">EVM</span></div>
+<div class="project-body">
+<div class="project-tags">
+<span class="pt">Circuit Design</span><span class="pt">Embedded
+C</span>
+</div>
+<h3>Electronic Voting Machine</h3>
+<p>Designed and built a complete EVM that was deployed for actual
+school elections with zero recorded errors. Received an appreciation letter
+from the principal; the unit is still in active use.</p>
+<div class="project-footer">
+<span>School Deployment</span>
+<span>Jul 2024 – Feb 2025</span>
+</div>
+</div>
+</article>
+<article class="project-card">
+<div class="project-cover"><span
+class="project-icon">SGPA</span></div>
+<div class="project-body">
+<div class="project-tags">
+<span class="pt">HTML</span><span class="pt">CSS</span><span
+class="pt">JavaScript</span>
+</div>
+<h3>KTU SGPA / CGPA Calculator</h3>
+<p>Web-based academic performance calculator for the KTU 2024
+scheme. Built and deployed for the EIE community; in active use by 40+
+engineering students.</p>
+<div class="project-footer">
+<span>40+ users</span>
+<a href="https://github.com/mohamedafnnan" target="_blank"
+rel="noopener">GitHub →</a>
+</div>
+</div>
+</article>
+<article class="project-card">
+<div class="project-cover"><span
+class="project-icon">HC-SR04</span></div>
+<div class="project-body">
+<div class="project-tags">
+<span class="pt">Arduino</span><span class="pt">Embedded
+C</span><span class="pt">Tinkercad</span>
+</div>
+<h3>Ultrasonic Distance Measurement System</h3>
+<p>Real-time proximity detection with HC-SR04, implementing
+three-zone threshold classification — red (&lt;20 cm), yellow (20–50 cm),
+green (&gt;50 cm) — with visual alerts.</p>
+<div class="project-footer">
+<span>Independent build</span>
+<span>May 2026</span>
+</div>
+</div>
+</article>
+<article class="project-card">
+<div class="project-cover"><span class="project-icon">module
+top();</span></div>
+<div class="project-body">
+<div class="project-tags">
+<span class="pt">Verilog HDL</span><span class="pt">EDA
+Playground</span><span class="pt">RTL</span>
+</div>
+<h3>Verilog HDL Digital Design</h3>
+<p>Sequential and combinational logic: D / JK / T flip-flops, a
+4-bit ripple counter, half adder, full adder, and gate-level designs —
+simulated and waveform-verified on EDA Playground.</p>
+<div class="project-footer">
+<span>S2 EIE Lab</span>
+<span>2026</span>
+</div>
+</div>
+</article>
+<article class="project-card">
+<div class="project-cover"><span class="project-icon">☼
+SOLAR</span></div>
+<div class="project-body">
+<div class="project-tags">
+<span class="pt">Renewable Energy</span><span
+class="pt">Thermal Systems</span><span class="pt">Field Work</span>
+</div>
+<h3>Solar Copra Dryer</h3>
+<p>Led a 10-member team designing a solar-powered copra dryer for
+Kudumbashree cooperative farmers — system design, documentation, community
+coordination, and grant applications to EPICS in IEEE and the IEEE-RAS IROS
+2026 Travel Grant.</p>
+<div class="project-footer">
+<span>Supervisor: Dr. Abi P Mathew</span>
+<span>2025 – 2026</span>
+</div>
+</div>
+</article>
+<article class="project-card">
+<div class="project-cover"><span
+class="project-icon">KEAM</span></div>
+<div class="project-body">
+<div class="project-tags">
+<span class="pt">Community</span><span
+class="pt">Content</span>
+</div>
+<h3>KEAM Admissions Helpdesk</h3>
+<p>Built and ran a student-led admissions helpdesk; assisted 50+
+students through KEAM rank, allotment rounds, and college selection. Produced
+allotment infographics and explainers for first-generation applicants.</p>
+<div class="project-footer">
+<span>50+ students helped</span>
+<span>Apr 2025 – Present</span>
+</div>
+</div>
+</article>
+<article class="project-card">
+<div class="project-cover"><span class="project-icon">EIE
+101</span></div>
+<div class="project-body">
+<div class="project-tags">
+<span class="pt">Technical Writing</span><span
+class="pt">Education</span>
+</div>
+<h3>EIE 101 Blog &amp; ATS Resume Guide</h3>
+<p>Writing series on instrumentation and embedded-systems
+fundamentals for first-year EIE students. Open-source ATS Resume Guide for
+engineering students — used in workshops at FISAT and Ansar English
+School.</p>
+<div class="project-footer">
+<span>Open-source resources</span>
+<span>Ongoing</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+<div class="container">
+<div class="section-head">
+<span class="eyebrow">Technical Stack</span>
+<h2 class="section-title">What I work with.</h2>
+<p class="section-sub">Tools and concepts I've used hands-on in
+coursework, lab work, or shipped projects.</p>
+</div>
+<div class="skills-grid">
+<div class="skill-block">
+<h4>HDL &amp; Digital Design</h4>
+<div class="skill-list">
+<span class="skill-tag">Verilog HDL</span>
+<span class="skill-tag">EDA Playground</span>
+<span class="skill-tag">RTL Simulation</span>
+<span class="skill-tag">FSM Design</span>
+<span class="skill-tag">Flip-Flops</span>
+<span class="skill-tag">Ripple Counters</span>
+<span class="skill-tag">Gate-Level Design</span>
+</div>
+</div>
+<div class="skill-block">
+<h4>Hardware &amp; Embedded</h4>
+<div class="skill-list">
+<span class="skill-tag">ESP32</span>
+<span class="skill-tag">Arduino</span>
+<span class="skill-tag">AVR</span>
+<span class="skill-tag">Sensor Interfacing</span>
+<span class="skill-tag">Signal Conditioning</span>
+<span class="skill-tag">Circuit Analysis</span>
+<span class="skill-tag">IoT</span>
+</div>
+</div>
+<div class="skill-block">
+<h4>Languages</h4>
+<div class="skill-list">
+<span class="skill-tag">Python</span>
+<span class="skill-tag">C</span>
+<span class="skill-tag">Embedded C</span>
+<span class="skill-tag">Shell</span>
+<span class="skill-tag">HTML</span>
+<span class="skill-tag">CSS</span>
+<span class="skill-tag">JavaScript</span>
+</div>
+</div>
+<div class="skill-block">
+<h4>Tools &amp; Platforms</h4>
+<div class="skill-list">
+<span class="skill-tag">Arduino IDE</span>
+<span class="skill-tag">MATLAB</span>
+<span class="skill-tag">Git</span>
+<span class="skill-tag">Linux / UNIX</span>
+<span class="skill-tag">Fusion 360</span>
+<span class="skill-tag">Tinkercad</span>
+<span class="skill-tag">Photoshop</span>
+<span class="skill-tag">OBS Studio</span>
+<span class="skill-tag">Audacity</span>
+</div>
+</div>
+<div class="skill-block">
+<h4>Focus Areas</h4>
+<div class="skill-list">
+<span class="skill-tag">Embedded Systems</span>
+<span class="skill-tag">Instrumentation</span>
+<span class="skill-tag">Industrial Automation</span>
+<span class="skill-tag">VLSI Concepts</span>
+<span class="skill-tag">Cybersecurity</span>
+<span class="skill-tag">Real-Time Systems</span>
+<span class="skill-tag">Edge AI</span>
+</div>
+</div>
+<div class="skill-block">
+<h4>Professional</h4>
+<div class="skill-list">
+<span class="skill-tag">Event Anchoring</span>
+<span class="skill-tag">Technical Writing</span>
+<span class="skill-tag">Editing</span>
+<span class="skill-tag">Public Speaking</span>
+<span class="skill-tag">Resume Writing</span>
+<span class="skill-tag">Outreach</span>
+<span class="skill-tag">Documentation</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ EXPERIENCE TIMELINE ============ -->
+<section id="experience">
+<div class="container">
+<div class="section-head">
+<span class="eyebrow">Experience</span>
+<h2 class="section-title">Recent timeline.</h2>
+<p class="section-sub">Concurrent roles across technical, leadership,
+and editorial work.</p>
+</div>
+<div class="timeline">
+<div class="tl-item current">
+<div class="tl-date">April 2026 – Present</div>
+<div class="tl-role">Google Student Ambassador</div>
+<div class="tl-org">Google</div>
+<div class="tl-desc">Selected through competitive psychometric and
+video submission rounds; representing Google's developer ecosystem on
+campus.</div>
+</div>
+<div class="tl-item current">
+<div class="tl-date">March 2026 – Present</div>
+<div class="tl-role">IoT Specialist &amp; IDEA Lab Student
+Representative</div>
+<div class="tl-org">AICTE IDEA Lab, FISAT</div>
+<div class="tl-desc">Contributing embedded-systems and IoT
+integration to the Smart Sensor-Based Traffic Alert System; scheduling
+Robotics Factory interviews and maintaining candidate records.</div>
+</div>
+<div class="tl-item current">
+<div class="tl-date">March 2026 – Present</div>
+<div class="tl-role">Chief Editor — Metron Vol. 9</div>
+<div class="tl-org">EIE Department Newsletter, FISAT</div>
+<div class="tl-desc">Sole Chief Editor for a publication reaching
+240+ students and 20+ faculty; managing content, layout, and publication
+end-to-end.</div>
+</div>
+<div class="tl-item">
+<div class="tl-date">May 2026</div>
+<div class="tl-role">Resource Person — LinkedIn &amp; Resume
+Workshops</div>
+<div class="tl-org">AICTE IDEA Lab, FISAT</div>
+<div class="tl-desc">Independently designed and delivered sessions
+on LinkedIn profile building and resume development for 11 Class 10–12
+students; curriculum re-delivered at Ansar English School. Recommended by Dr.
+Abi P Mathew.</div>
+</div>
+<div class="tl-item">
+<div class="tl-date">April 2026</div>
+<div class="tl-role">Campus Ambassador — PRIM.E 2026</div>
+<div class="tl-org">IEEE-RAS / GEC Thrissur</div>
+<div class="tl-desc">Drove 10 of 30 team registrations for the
+national robotics event; all 30 slots filled within 3 days, including 6 teams
+from FISAT.</div>
+</div>
+<div class="tl-item">
+<div class="tl-date">February 2026</div>
+<div class="tl-role">Anchoring Lead — TANTRA'26</div>
+<div class="tl-org">ISTE FISAT · National Technical Event</div>
+<div class="tl-desc">Led anchoring for a national-level technical
+event — scripting, spontaneous delivery, audience engagement, and live
+coordination with the organising team.</div>
+</div>
+<div class="tl-item">
+<div class="tl-date">December 2025 – Present</div>
+<div class="tl-role">Student Representative &amp; Core Outreach
+Lead</div>
+<div class="tl-org">ISA, FISAT</div>
+<div class="tl-desc">1st-year ISA representative; coordinated
+technical workshops and helped first-year members transition into
+professional work culture. Joined the Core Outreach Team for the ISA national
+techathon.</div>
+</div>
+<div class="tl-item">
+<div class="tl-date">August 2025 – Present</div>
+<div class="tl-role">Administrative Associate</div>
+<div class="tl-org">FISAT · EIE Department</div>
+<div class="tl-desc">Designed duty-leave letters and Friday prayer
+attendance request forms from scratch — adopted and in active use across the
+entire EIE department. Maintains Excel datasets with AI-assisted
+workflows.</div>
+</div>
+<div class="tl-item">
+<div class="tl-date">August 2025 – February 2026</div>
+<div class="tl-role">Class Representative</div>
+<div class="tl-org">FISAT · EIE Department</div>
+<div class="tl-desc">Primary liaison between faculty and the
+2025–29 EIE batch; managed academic updates, deadline communication, and fund
+collection.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ============ CERTIFICATIONS / AWARDS ============ -->
+<section id="certifications">
+<div class="container">
+<div class="section-head">
+<span class="eyebrow">Certifications &amp; Recognition</span>
+<h2 class="section-title">Credentials and the work that earned
+them.</h2>
+</div>
+<div class="dual-grid">
+<article class="list-card">
+<h3>Certifications</h3>
+<ul>
+<li>
+<div>ISC2 Certified in Cybersecurity (CC)
+<small>In progress — training &amp; examination
+preparation</small></div>
+</li>
+<li>Microsoft Certified: Azure AI Fundamentals</li>
+<li>Python Programming &amp; Essentials — Coursera</li>
+<li>MATLAB Fundamentals — NSDC</li>
+<li>
+<div>ESP32 Bootcamp Certification
+<small>IDEA, FISAT — IoT &amp; Wireless Embedded
+Systems</small></div>
+</li>
+<li>
+<div>Arduino Bootcamp Workshop Certification
+<small>IDEA × ISA, FISAT — Microcontroller &amp; Embedded
+Systems</small></div>
+</li>
+<li>
+<div>Toastmasters Youth Leadership Programme
+<small>Dukhan, Qatar</small></div>
+</li>
+</ul>
+</article>
+<article class="list-card">
+<h3>Awards &amp; Recognition</h3>
+<ul>
+<li>
+<div><span class="award-badge">Record</span> India Book of
+Records — Fastest Left-Handed Typist
+<small>80 WPM · Video-verified · 2025</small></div>
+</li>
+<li>
+<div><span class="award-badge">1st Prize</span> Innomark Logo
+Design Challenge
+<small>IDEA Club, FISAT · 2025</small></div>
+</li>
+<li>
+<div><span class="award-badge">Honor</span> EVM Project
+Appreciation Letter
+<small>From School Principal · 2025</small></div>
+</li>
+<li>
+<div><span class="award-badge">Win</span> Inter-School Class
+Magazine Design Competition
+<small>Co-editor · 2024</small></div>
+</li>
+<li>
+<div><span class="award-badge">Featured</span> Recommended by
+Dr. Abi P Mathew
+<small>For resource-person delivery at Ansar English
+School</small></div>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+<!-- ============ MEDIA GALLERY ============ -->
+<section id="media">
+<div class="container">
+<div class="section-head">
+<span class="eyebrow">Media</span>
+<h2 class="section-title">Selected media.</h2>
+<p class="section-sub">A short look behind the resume.</p>
+</div>
+<div class="media-grid">
+<article class="media-card">
+<h3>India Book of Records — 80 WPM Left-Handed Typing</h3>
+<p class="media-meta">Video-verified record run · 2025</p>
+<div class="media-frame">
+<video controls preload="metadata" poster="">
+<source src="typing.mp4" type="video/mp4">
+<track kind="subtitles" src="subtitles.vtt" srclang="en"
+label="English" default>
+Your browser does not support the video element.
+</video>
+</div>
+</article>
+<article class="media-card">
+<h3>Anchoring Showreel</h3>
+<p class="media-meta">TANTRA'26 · BHARATHAM'26 · AARANGU'26 · IEDC
+Farewell</p>
+<div class="placeholder-frame">
+<div>
+<div class="ph-label">Placeholder</div>
+<div class="ph-text">Drop <code>showreel.mp4</code> here.
+Highlights from national-level anchoring engagements.</div>
+</div>
+</div>
+</article>
+<article class="media-card" style="grid-column:span 2">
+<h3>Soundtrack of the build process</h3>
+<p class="media-meta">Personal pick · plays in the workshop while
+the iron heats up</p>
+<div class="media-frame">
+<audio controls preload="metadata">
+<source src="audio.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ============ EDUCATION ============ -->
+<section id="education">
+<div class="container">
+<div class="section-head">
+<span class="eyebrow">Education</span>
+<h2 class="section-title">Academic background.</h2>
+</div>
+<div class="edu-grid">
+<article class="edu-row">
+<div class="edu-period">Aug 2025 – Sep 2029</div>
+<div>
+<h3>B.Tech, Electronics &amp; Instrumentation Engineering</h3>
+<div class="edu-school">Federal Institute of Science and
+Technology (FISAT), Angamaly</div>
+<div class="edu-note">Coursework: Engineering Mathematics · Basic
+Electrical Engineering · Electronic Devices · Engineering Physics · C
+Programming · Logic Circuit Design. Active in ISA, IEEE, IEEE-RAS, IEDC,
+AICTE IDEA Lab.</div>
+</div>
+<div class="edu-status">Current · S2 done</div>
+</article>
+<article class="edu-row">
+<div class="edu-period">Completed May 2025</div>
+<div>
+<h3>CBSE Grade 12 — Science</h3>
+<div class="edu-school">Ansar English School, Perumpilavu,
+Kerala</div>
+</div>
+<div class="edu-status">Completed</div>
+</article>
+<article class="edu-row">
+<div class="edu-period">Grade 10</div>
+<div>
+<h3>Cambridge IGCSE</h3>
+<div class="edu-school">Devamatha CMI International School,
+Thangaloor, Kerala</div>
+</div>
+<div class="edu-status">Completed</div>
+</article>
+<article class="edu-row">
+<div class="edu-period">Grade 8</div>
+<div>
+<h3>UK National Curriculum</h3>
+<div class="edu-school">Dukhan English School, Dukhan,
+Qatar</div>
+</div>
+<div class="edu-status">Completed</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+<div class="container">
+<div class="section-head">
+<span class="eyebrow">Contact</span>
+<h2 class="section-title">Let's build something.</h2>
+<p class="section-sub">Open to internships, embedded-systems
+collaborations, robotics competitions, and speaking engagements. Reply
+usually within 24 hours.</p>
+</div>
+<div class="contact-grid">
+<aside class="contact-card">
+<h3
+style="font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:v
+ar(--text-mute);font-weight:600">Direct Channels</h3>
+<div class="contact-channels">
+<a class="channel" href="mailto:afnnan.dev@gmail.com">
+<div class="channel-l">
+<div class="channel-icon">@</div>
+<div>
+<div class="channel-name">Email</div>
+<div class="channel-value">afnnan.dev@gmail.com</div>
+</div>
+</div>
+<span class="channel-arrow">→</span>
+</a>
+<a class="channel" href="https://linkedin.com/in/mohamedafnnan"
+target="_blank" rel="noopener">
+<div class="channel-l">
+<div class="channel-icon">in</div>
+<div>
+<div class="channel-name">LinkedIn</div>
+<div class="channel-value">/in/mohamedafnnan</div>
+</div>
+</div>
+<span class="channel-arrow">→</span>
+</a>
+<a class="channel" href="https://github.com/mohamedafnnan"
+target="_blank" rel="noopener">
+<div class="channel-l">
+<div class="channel-icon">gh</div>
+<div>
+<div class="channel-name">GitHub</div>
+<div class="channel-value">/mohamedafnnan</div>
+</div>
+</div>
+<span class="channel-arrow">→</span>
+</a>
+<a class="channel" href="https://linktr.ee/mohamedafnnan"
+target="_blank" rel="noopener">
+<div class="channel-l">
+<div class="channel-icon">lt</div>
+<div>
+<div class="channel-name">Linktree</div>
+<div class="channel-value">/mohamedafnnan</div>
+</div>
+</div>
+<span class="channel-arrow">→</span>
+</a>
+<a class="channel" href="tel:+918891508831">
+<div class="channel-l">
+<div class="channel-icon">☎</div>
+<div>
+<div class="channel-name">Phone</div>
+<div class="channel-value">+91 88915 08831</div>
+</div>
+</div>
+<span class="channel-arrow">→</span>
+</a>
+</div>
+</aside>
+<form class="contact-form" action="mailto:afnnan.dev@gmail.com"
+method="post" enctype="text/plain">
+<div class="form-grid">
+<div class="form-group">
+<label for="cname">Full Name</label>
+<input type="text" id="cname" name="name" placeholder="Your
+full name" required>
+</div>
+<div class="form-group">
+<label for="cemail">Email</label>
+<input type="email" id="cemail" name="email"
+placeholder="you@domain.com" required>
+</div>
+<div class="form-group full">
+<label for="creason">Subject</label>
+<select id="creason" name="subject" required>
+<option value="">Select a reason</option>
+<option value="internship">Internship opportunity</option>
+<option value="collaboration">Project collaboration</option>
+<option value="robotics">Robotics competition /
+event</option>
+<option value="speaking">Anchoring / speaking
+engagement</option>
+<option value="resume">Resume writing services</option>
+<option value="general">General enquiry</option>
+</select>
+</div>
+<div class="form-group full">
+<label for="cmsg">Message</label>
+<textarea id="cmsg" name="message" rows="6" placeholder="Tell
+me about what you're working on..." required></textarea>
+</div>
+<div class="form-group full">
+<label
+style="display:flex;align-items:center;gap:10px;text-transform:none;letter-sp
+acing:0;font-weight:400;color:var(--text-dim);font-size:.85rem">
+<input type="checkbox" name="consent" value="yes" required
+style="width:auto">
+I consent to being contacted at the address provided.
+</label>
+</div>
+<div class="form-actions">
+<button type="submit" class="btn btn-primary">Send message
+<span class="arrow">→</span></button>
+<button type="reset" class="btn btn-ghost">Clear</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<div class="footer-top">
+<div>
+<div class="footer-brand">Mohamed Afnnan Veettilayil</div>
+<p class="footer-tag">Electronics &amp; Instrumentation Engineering
+student at FISAT. Building embedded systems, leading student communities, and
+writing for engineers earlier in the journey than I am.</p>
+</div>
+<div class="footer-col">
+<h5>Sections</h5>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#leadership">Leadership</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h5>Elsewhere</h5>
+<ul>
+<li><a href="https://linkedin.com/in/mohamedafnnan" target="_blank"
+rel="noopener">LinkedIn</a></li>
+<li><a href="https://github.com/mohamedafnnan" target="_blank"
+rel="noopener">GitHub</a></li>
+<li><a href="https://linktr.ee/mohamedafnnan" target="_blank"
+rel="noopener">Linktree</a></li>
+<li><a href="mailto:afnnan.dev@gmail.com">Email</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Mohamed Afnnan Veettilayil. All rights reserved.</span>
+<span class="built">Thrissur, Kerala · India</span>
+</div>
+</div>
+</footer>
 </body>
 </html>
