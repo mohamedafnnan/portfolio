@@ -855,5 +855,155 @@ document.addEventListener('DOMContentLoaded', async function() {
   }, 12000);
 })();
 </script>
+<script id="mobile-sidebar-final-runtime">
+(function () {
+  'use strict';
+  var treeObserver = null;
+  var classObserver = null;
+  var observedTop = null;
+  var observedHtml = null;
+  var applyQueued = false;
+  var actionNodes = new WeakSet();
+  var toggleNodes = new WeakSet();
+  var mobileQuery = window.matchMedia('(max-width:700px)');
+  var navTargets = {
+    'Rover':'rover','OT-SLA testbed':'scada','Arm':'arm','Work':'work',
+    'Wins':'wins','About':'about','Experience':'experience','Certificates':'certs','Doc Archive':'certs','Library':'library',
+    'Toolkit':'toolkit','Authored':'authored','Field notes':'notes',
+    'Table tennis':'tennis','Hello':'hello'
+  };
+
+  function bindDetachedActions(nav) {
+    if (actionNodes.has(nav)) return;
+    actionNodes.add(nav);
+    nav.addEventListener('click', function (event) {
+      var item = event.target.closest && event.target.closest('.nb');
+      if (!item) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      document.documentElement.classList.remove('menu-open');
+      var label = (item.textContent || '').replace(/\s+/g, ' ').trim();
+      if (label === 'Replay intro') {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        var intro = document.querySelector('#hello,[data-label="Portfolio"]');
+        if (intro && intro.id !== 'hello') intro.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return;
+      }
+      var id = navTargets[label];
+      if (id && typeof window.__p5go === 'function') window.__p5go(id);
+      else {
+        var section = id && document.getElementById(id);
+        if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, true);
+  }
+
+  function bindDetachedToggle(button) {
+    if (toggleNodes.has(button)) return;
+    toggleNodes.add(button);
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      var open = !document.documentElement.classList.contains('menu-open');
+      document.documentElement.classList.toggle('menu-open', open);
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }, true);
+  }
+
+  function setImportant(element, values) {
+    Object.keys(values).forEach(function (property) {
+      element.style.setProperty(property, values[property], 'important');
+    });
+  }
+
+  function apply() {
+    if (!mobileQuery.matches || !document.body) return;
+    var nav = document.getElementById('sideNav');
+    var button = document.querySelector('.mnuBtn');
+    if (!nav || !button) return;
+
+    // Shift the control from its former viewport position (27px, 44px) to (23px, 52px).
+    // Escape the transformed header stacking context so the toggle remains on top of the drawer.
+    if (button.parentNode !== document.body) document.body.appendChild(button);
+    bindDetachedToggle(button);
+    setImportant(button, { position: 'fixed', left: '23px', top: '52px', 'z-index': '6000' });
+
+    // Keep the drawer out of the application's transformed layout subtree.
+    if (nav.parentNode !== document.body) document.body.appendChild(nav);
+    nav.classList.add('mobile-sidebar-detached');
+    nav.setAttribute('aria-label', 'Portfolio navigation');
+    bindDetachedActions(nav);
+
+    var open = document.documentElement.classList.contains('menu-open');
+    button.setAttribute('aria-expanded', String(open));
+    setImportant(nav, {
+      position: 'fixed', inset: '0 auto 0 0',
+      width: 'min(280px,86vw)', 'max-width': 'calc(100vw - 24px)',
+      height: '100dvh', 'min-height': '100dvh', 'max-height': '100dvh',
+      margin: '0', padding: '112px 14px 28px', 'box-sizing': 'border-box',
+      display: 'flex', 'flex-direction': 'column', 'flex-wrap': 'nowrap',
+      'align-items': 'stretch', 'justify-content': 'flex-start', gap: '9px',
+      'overflow-x': 'hidden', 'overflow-y': 'auto',
+      'overscroll-behavior': 'contain', '-webkit-overflow-scrolling': 'touch',
+      'touch-action': 'pan-y', 'background-color': '#E60A1E',
+      'border-right': '5px solid #000', 'box-shadow': '8px 0 0 #000',
+      opacity: '1', visibility: open ? 'visible' : 'hidden',
+      transform: open ? 'translate3d(0,0,0)' : 'translate3d(-110%,0,0)',
+      'pointer-events': open ? 'auto' : 'none', 'z-index': '5000',
+      transition: 'transform .28s cubic-bezier(.7,0,.2,1), visibility 0s linear .28s'
+    });
+    if (open) nav.style.setProperty('transition', 'transform .28s cubic-bezier(.7,0,.2,1), visibility 0s', 'important');
+    nav.querySelectorAll('.nb').forEach(function (item) {
+      setImportant(item, {
+        display: 'flex', flex: '0 0 auto', 'flex-shrink': '0', width: '100%',
+        'min-width': '0', 'min-height': '44px', margin: '0', padding: '8px 10px',
+        'box-sizing': 'border-box', 'justify-content': 'flex-start',
+        'text-align': 'left', 'white-space': 'nowrap', 'pointer-events': 'auto'
+      });
+    });
+  }
+
+  function start() {
+    if (!mobileQuery.matches) return;
+    apply();
+    function scheduleApply() {
+      if (applyQueued) return;
+      applyQueued = true;
+      window.requestAnimationFrame(function () {
+        applyQueued = false;
+        watchRoots();
+        apply();
+      });
+    }
+    function watchRoots() {
+      var html = document.documentElement;
+      if (html && html !== observedHtml) {
+        if (classObserver) classObserver.disconnect();
+        observedHtml = html;
+        classObserver.observe(html, { attributes: true, attributeFilter: ['class'] });
+      }
+      var top = document.getElementById('top');
+      if (top && top !== observedTop) {
+        if (treeObserver) treeObserver.disconnect();
+        observedTop = top;
+        treeObserver.observe(top, { childList: true, subtree: true });
+      }
+    }
+    treeObserver = new MutationObserver(scheduleApply);
+    classObserver = new MutationObserver(scheduleApply);
+    watchRoots();
+    // Recover after the initial mobile-polish React render and any late template replacement.
+    [120, 450, 900, 1800, 2600].forEach(function (delay) { window.setTimeout(scheduleApply, delay); });
+    window.addEventListener('load', scheduleApply, { once: true });
+    window.addEventListener('resize', scheduleApply, { passive: true });
+    if (mobileQuery.addEventListener) mobileQuery.addEventListener('change', scheduleApply);
+    else if (mobileQuery.addListener) mobileQuery.addListener(scheduleApply);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
+  else start();
+})();
+</script>
 </body>
 </html>
