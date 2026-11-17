@@ -11,7 +11,7 @@ The portfolio is a static GitHub Pages site with no build step. The main experie
 - An interactive Three.js rover experience with missions, checkpoints, map, camera, sound, and mobile controls.
 - The DHT11 OT Sentinel two-node environmental-monitor project log, covering the ESP32-WROOM sensor node, UDP measurements, SSD1306 monitor node, USB/TCP commands, and simulated tampering alert.
 - Project cards and full logs for the CNC plotter, TracerCon line follower, OLED display animation, and other engineering work.
-- A work timeline, wins archive, experience filters, creative work, field notes, certificates, résumé, and contact sections.
+- A work timeline, wins archive, experience filters, creative work, field notes, a Doc Archive, a reading library, résumé, and contact sections.
 - Responsive navigation and compact mobile layouts for the website and interactive 3D sections.
 - A clue-based Easter egg checklist that completes through interactions across the site.
 
