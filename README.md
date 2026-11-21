@@ -4,37 +4,20 @@ Personal portfolio for **Mohamed Afnnan Veettilayil**: practical engineering sys
 
 Live site: **<https://mohamedafnnan.github.io/portfolio/>**
 
-## What is included
+## Site and repository layout
 
-The portfolio is a static GitHub Pages site with no build step. The main experience is delivered from `index.html` and includes:
+This is a static GitHub Pages portfolio with no build step. **`index.html`** is the repository-root entry point and contains the complete interactive page, styles, scripts, bundled template, and interactive experiences. **`resume.pdf`** remains at the repository root because the page downloads it directly as `resume.pdf`.
 
-- An interactive Three.js rover experience with missions, checkpoints, map, camera, sound, and mobile controls.
-- The DHT11 OT Sentinel two-node environmental-monitor project log, covering the ESP32-WROOM sensor node, UDP measurements, SSD1306 monitor node, USB/TCP commands, and simulated tampering alert.
-- Project cards and full logs for the CNC plotter, TracerCon line follower, OLED display animation, and other engineering work.
-- A work timeline, wins archive, experience filters, creative work, field notes, a Doc Archive, a reading library, résumé, and contact sections.
-- Responsive navigation and compact mobile layouts for the website and interactive 3D sections.
-- A clue-based Easter egg checklist that completes through interactions across the site.
+Runtime media is grouped under `assets/` by type:
 
-## ASCII art
+- `assets/book-covers/` — reading-library covers and source notes.
+- `assets/certificates/` — certificate PDFs and the certificate sprite.
+- `assets/illustrations/` — the ASCII hero portrait and `ascii-art-source.txt`.
+- `assets/images/` — project photography and portfolio images.
+- `assets/posters/` — poster artwork.
+- `assets/videos/` — project and creative-work video assets.
 
-The hero portrait is built from the uploaded ASCII artwork. The PNG is embedded directly in the hero template so it remains reliable on GitHub Pages, including when the page is rendered through the portfolio's bundled template runtime. The original source files are also kept in the repository:
-
-- `ascii-art.png` — rendered ASCII-art portrait.
-- `ascii-art.txt` — character-based source artwork.
-
-The hero uses full-image containment rather than aggressive cropping, so the complete portrait remains visible on desktop and mobile screens.
-
-## Repository structure
-
-- `index.html` — the complete interactive portfolio page, including its styles, scripts, bundled template, embedded hero artwork, and interactive experiences.
-- `assets/` — project media and certificates used by the site.
-- `resume.pdf` — downloadable résumé.
-- `ascii-art.png` and `ascii-art.txt` — hero artwork source files.
-- `180 students session img 1.jpeg`, `180 students session img 2.jpeg` — supporting portfolio photography.
-- `teardown_SKILL.md` — technical illustration guidance retained with the project materials.
-- `.github/workflows/pages.yml` — automatic GitHub Pages deployment on pushes to `main`.
-
-Important media includes the TracerCon build and team photos, CNC plotter video and build image, OLED display video, line-follower video, Venom voice-over video, and certificate PDFs.
+`docs/reference/teardown-skill.md` is retained technical reference material and is not a runtime site asset. The deployment workflow remains at `.github/workflows/pages.yml` and uploads the repository root to GitHub Pages.
 
 ## Local preview
 
