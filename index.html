@@ -406,6 +406,15 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
     </div>
   </noscript>
 
+
+<style id="desktop-motion-fixes">
+/* Keep the table-tennis readout compact, centered and visibly offset below the court. */
+.tennis-live-score{display:flex!important;align-items:center!important;justify-content:center!important;gap:18px!important;width:max-content!important;max-width:100%!important;box-sizing:border-box!important;margin:16px auto 0!important;padding:10px 16px!important;border:3px solid #000!important;box-shadow:5px 5px 0 #000!important;background:#0E1613!important;color:#56E0B4!important;font:700 13px/1 'Familjen Grotesk',Arial,sans-serif!important;letter-spacing:.09em!important;text-transform:uppercase!important}
+.tennis-live-score span{white-space:nowrap!important}.tennis-live-score span+span{border-left:2px solid #56E0B4!important;padding-left:18px!important}.tennis-live-score b{display:inline-block!important;margin-left:6px!important;color:#FFD400!important;font:400 34px/.85 Anton,Impact,sans-serif!important;letter-spacing:0!important}
+@media(max-width:480px){.tennis-live-score{width:max-content!important;min-width:0!important;margin-top:13px!important;padding:9px 12px!important;gap:13px!important}.tennis-live-score span+span{padding-left:13px!important}}
+@keyframes winsDesktopDealFlash{0%{opacity:.65;filter:brightness(.82)}55%{opacity:1;filter:brightness(1.15)}100%{opacity:1;filter:none}}
+@media(min-width:701px){#wins .wins-deck.wins-desktop-flash>.win-deck-card{animation:winsDesktopDealFlash 520ms cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--win-i,0)*42ms)}}
+</style>
 </head>
 <body>
   <div id="__bundler_placeholder">Loading Afnnan | Practical systems, clearly explained...</div>
@@ -1440,6 +1449,79 @@ document.addEventListener('DOMContentLoaded', async function() {
   boot();
   new MutationObserver(function(){clearTimeout(timer);timer=setTimeout(boot,25);}).observe(document.documentElement,{childList:true,subtree:true});
   document.addEventListener('visibilitychange',repairVideos);
+})();
+</script>
+<script id="desktop-motion-runtime">
+(function(){
+  'use strict';
+  var frame=0,lastX=null,videoObserver=null;
+  function clamp(n){return Math.max(-1,Math.min(1,n));}
+  function poseArm(x){
+    var arm=document.querySelector('#arm .arm-between');
+    if(!arm)return;
+    var svg=arm.querySelector('svg'),a1=svg&&svg.querySelector('.a1'),a2=svg&&svg.querySelector('.a2');
+    if(!a1||!a2)return;
+    var r=arm.getBoundingClientRect();
+    var n=typeof x==='number'?clamp((x-(r.left+r.width/2))/Math.max(1,r.width/2)):clamp((innerHeight*.52-(r.top+r.height/2))/Math.max(1,r.height/2));
+    a1.setAttribute('transform','translate(75 282) rotate('+(-100+n*26).toFixed(2)+')');
+    a2.setAttribute('transform','translate(96 0) rotate('+(30-n*38).toFixed(2)+')');
+  }
+  document.addEventListener('pointermove',function(e){
+    if(!e.target||!e.target.closest||!e.target.closest('#arm'))return;
+    lastX=e.clientX;if(frame)return;
+    frame=requestAnimationFrame(function(){frame=0;poseArm(lastX);});
+  },{passive:true});
+  document.addEventListener('pointerout',function(e){
+    if(e.target&&e.target.closest&&e.target.closest('#arm')&&(!e.relatedTarget||!e.relatedTarget.closest||!e.relatedTarget.closest('#arm'))){lastX=null;poseArm(null);}
+  },{passive:true});
+  window.addEventListener('scroll',function(){if(lastX===null)poseArm(null);},{passive:true});
+
+  function styleScore(){
+    document.querySelectorAll('.tennis-live-score').forEach(function(box){
+      var props={display:'flex',alignItems:'center',justifyContent:'center',gap:'18px',width:'max-content',maxWidth:'100%',boxSizing:'border-box',margin:'16px auto 0',padding:'10px 16px',border:'3px solid #000',boxShadow:'5px 5px 0 #000',background:'#0E1613',color:'#56E0B4',font:"700 13px/1 'Familjen Grotesk',Arial,sans-serif",letterSpacing:'.09em',textTransform:'uppercase'};
+      Object.keys(props).forEach(function(k){box.style.setProperty(k.replace(/[A-Z]/g,function(m){return '-'+m.toLowerCase();}),props[k],'important');});
+      box.querySelectorAll('span').forEach(function(span){span.style.setProperty('white-space','nowrap','important');});
+      var second=box.querySelector('span+span');if(second){second.style.setProperty('border-left','2px solid #56E0B4','important');second.style.setProperty('padding-left','18px','important');}
+      box.querySelectorAll('b').forEach(function(n){n.style.setProperty('display','inline-block','important');n.style.setProperty('margin-left','6px','important');n.style.setProperty('color','#FFD400','important');n.style.setProperty('font','400 34px/.85 Anton,Impact,sans-serif','important');n.style.setProperty('letter-spacing','0','important');});
+    });
+  }
+  function attachVideo(v){
+    if(v.dataset.desktopMotionObserved==='1')return;
+    v.dataset.desktopMotionObserved='1';v.muted=true;v.defaultMuted=true;v.autoplay=true;v.loop=true;
+    v.setAttribute('muted','');v.setAttribute('autoplay','');v.setAttribute('playsinline','');
+    if(videoObserver)videoObserver.observe(v);
+    else {var r=v.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight&&!document.hidden)v.play().catch(function(){});}
+  }
+  if('IntersectionObserver' in window){
+    videoObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){var v=entry.target;if(entry.isIntersecting&&entry.intersectionRatio>=.2&&!document.hidden){v.play().catch(function(){});}else{v.pause();}});},{threshold:[0,.2,.5]});
+  }
+  function scan(){styleScore();document.querySelectorAll('#arm video.line-follower-video,video.line-follower-video').forEach(attachVideo);}
+  scan();
+  var scanPending=false;
+  new MutationObserver(function(){if(scanPending)return;scanPending=true;requestAnimationFrame(function(){scanPending=false;scan();});}).observe(document.documentElement,{childList:true,subtree:true});
+  document.addEventListener('visibilitychange',function(){if(!document.hidden)scan();});
+
+  document.addEventListener('click',function(e){
+    var card=e.target&&e.target.closest&&e.target.closest('#wins .win-deck-card');
+    var deck=card&&card.parentElement;
+    if(!deck)return;
+    window.setTimeout(function(){
+      if(!deck.classList.contains('is-dealt'))return;
+      if(matchMedia('(min-width:701px)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+        deck.querySelectorAll('.win-deck-card').forEach(function(c,i){
+          if(typeof c.animate==='function')c.animate([{opacity:.62,filter:'brightness(.82)'},{opacity:1,filter:'brightness(1.14)'},{opacity:1,filter:'none'}],{duration:520,delay:i*42,easing:'cubic-bezier(.2,.8,.2,1)',fill:'both'});
+        });
+      }
+    },0);
+  });
+  // Resume Web Audio synchronously from a real mouse/touch/key gesture before
+  // the deal handler schedules the individual card sounds.
+  document.addEventListener('pointerdown',function(){
+    try{var AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;var c=window.__winsDealAudio||(window.__winsDealAudio=new AC());if(c.state==='suspended')c.resume();}catch(_){ }
+  },{capture:true,passive:true});
+  document.addEventListener('keydown',function(){
+    try{var AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;var c=window.__winsDealAudio||(window.__winsDealAudio=new AC());if(c.state==='suspended')c.resume();}catch(_){ }
+  },{capture:true,passive:true});
 })();
 </script>
 </body>
