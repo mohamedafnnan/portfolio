@@ -1648,5 +1648,22 @@ document.addEventListener('DOMContentLoaded', async function() {
   else window.setInterval(bind,250);
 })();
 </script>
+<style id="mobile-joystick-final">
+/* Clearly visible phone joystick: the existing data-k buttons remain the rover input source. */
+@media (pointer:coarse), (max-width:900px){
+  #rover .dpad{
+    display:grid!important;position:absolute!important;left:12px!important;bottom:112px!important;z-index:40!important;
+    width:178px!important;height:178px!important;padding:38px!important;box-sizing:border-box!important;
+    grid-template:repeat(3,1fr)/repeat(3,1fr)!important;gap:5px!important;border:4px solid #000!important;
+    border-radius:50%!important;background:#2b3a33!important;box-shadow:7px 7px 0 #000!important;
+  }
+  #rover .dpad::before{content:"JOYSTICK";position:absolute;left:50%;top:12px;transform:translateX(-50%);color:#56E0B4;font:700 10px/1 'Familjen Grotesk',Arial,sans-serif;letter-spacing:.08em;pointer-events:none}
+  #rover .dpad span{display:block!important;visibility:hidden!important}
+  #rover .dpad button{display:grid!important;place-items:center!important;width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;padding:0!important;border:3px solid #000!important;border-radius:50%!important;background:#8CD9FF!important;color:#000!important;box-shadow:3px 3px 0 #000!important;font-size:22px!important;line-height:1!important;touch-action:none!important;user-select:none!important;-webkit-user-select:none!important}
+  #rover .dpad button:active,#rover .dpad button.is-held{transform:translate(2px,2px)!important;background:#56E0B4!important;box-shadow:1px 1px 0 #000!important}
+  #rover .dpad button[data-k="w"]{grid-area:1/2}.dpad button[data-k="a"]{grid-area:2/1}.dpad button[data-k="s"]{grid-area:3/2}.dpad button[data-k="d"]{grid-area:2/3}
+  #rover .arw{display:none!important}
+}
+</style>
 </body>
 </html>
