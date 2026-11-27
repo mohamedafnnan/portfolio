@@ -1621,7 +1621,31 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
     window.clearTimeout(timer);timer=window.setTimeout(paint,160);
   }
-  paint();window.addEventListener('load',paint,{once:true});
+  paint();
+  window.addEventListener('load',paint,{once:true});
+  if(window.MutationObserver){
+    new MutationObserver(function(){paint();}).observe(document.documentElement,{childList:true,subtree:true});
+  } else {
+    window.setInterval(paint,250);
+  }
+})();
+</script>
+<script id="mobile-dpad-fallback">
+(function(){
+  function bind(){
+    document.querySelectorAll('#rover .dpad [data-k]').forEach(function(button){
+      if(button.dataset.fallbackBound==='1')return;
+      button.dataset.fallbackBound='1';
+      var key=button.dataset.k;
+      function down(e){e.preventDefault();button.classList.add('is-held');window.dispatchEvent(new KeyboardEvent('keydown',{key:key,code:'Key'+key.toUpperCase(),bubbles:true}));}
+      function up(e){if(e)e.preventDefault();button.classList.remove('is-held');window.dispatchEvent(new KeyboardEvent('keyup',{key:key,code:'Key'+key.toUpperCase(),bubbles:true}));}
+      button.addEventListener('pointerdown',down,{passive:false});
+      ['pointerup','pointercancel','pointerleave'].forEach(function(t){button.addEventListener(t,up,{passive:false});});
+    });
+  }
+  bind();
+  if(window.MutationObserver)new MutationObserver(bind).observe(document.documentElement,{childList:true,subtree:true});
+  else window.setInterval(bind,250);
 })();
 </script>
 </body>
